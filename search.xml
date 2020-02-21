@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>使用阿里云OSS作为个人图床</title>
+      <link href="/2020/02/21/shi-yong-a-li-yun-oss-zuo-wei-ge-ren-tu-chuang/"/>
+      <url>/2020/02/21/shi-yong-a-li-yun-oss-zuo-wei-ge-ren-tu-chuang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用阿里云OSS作为个人图床"><a href="#使用阿里云OSS作为个人图床" class="headerlink" title="使用阿里云OSS作为个人图床"></a>使用阿里云OSS作为个人图床</h1><p>使用Markdown写博客的时候，有时候会需要插入图片，markdown一般都是插入的本地图片，所以当要分享到网络上，或者上传的github上的时候会失效，解决方法一般是先将本地图片上传到图床上面。</p><p>如果是到网页上传，再复制得到图片地址，过程会比较繁琐，好在已经有大神开发出了专门的可视化工具来简化操作——<a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener">PicGo</a>，非常好用。本文就是使用阿里云OSS配合PicGo实现图片秒传的体验。</p><h2 id="PicGo界面"><a href="#PicGo界面" class="headerlink" title="PicGo界面"></a>PicGo界面</h2><p><img src="https://cdn.jsdelivr.net/gh/Molunerfinn/test/picgo-site/first.png" alt="picgo界面"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> 个人工具 </tag>
+            
+            <tag> 图床 </tag>
+            
+            <tag> 阿里OSS </tag>
+            
+            <tag> PicGo </tag>
+            
+            <tag> 采坑 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown 语法备忘</title>
       <link href="/2020/02/21/markdown-yu-fa-bei-wang/"/>
       <url>/2020/02/21/markdown-yu-fa-bei-wang/</url>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-02-21T12:12:27.675Z</updated>
+  <updated>2020-02-21T12:52:59.973Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用阿里云OSS作为个人图床</title>
+    <link href="https://kirahan.github.io/2020/02/21/shi-yong-a-li-yun-oss-zuo-wei-ge-ren-tu-chuang/"/>
+    <id>https://kirahan.github.io/2020/02/21/shi-yong-a-li-yun-oss-zuo-wei-ge-ren-tu-chuang/</id>
+    <published>2020-02-21T12:37:37.000Z</published>
+    <updated>2020-02-21T12:52:59.973Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;使用阿里云OSS作为个人图床&quot;&gt;&lt;a href=&quot;#使用阿里云OSS作为个人图床&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://kirahan.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="笔记" scheme="https://kirahan.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="个人工具" scheme="https://kirahan.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="图床" scheme="https://kirahan.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+      <category term="阿里OSS" scheme="https://kirahan.github.io/tags/%E9%98%BF%E9%87%8COSS/"/>
+    
+      <category term="PicGo" scheme="https://kirahan.github.io/tags/PicGo/"/>
+    
+      <category term="采坑" scheme="https://kirahan.github.io/tags/%E9%87%87%E5%9D%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown 语法备忘</title>
