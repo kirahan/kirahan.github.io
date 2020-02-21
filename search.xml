@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Markdown 语法备忘</title>
+      <link href="/2020/02/21/markdown-yu-fa-bei-wang/"/>
+      <url>/2020/02/21/markdown-yu-fa-bei-wang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><pre><code># 这是一级标题## 这是二级标题### 这是三级标题#### 这是四级标题##### 这是五级标题###### 这是六级标题</code></pre><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><pre><code>**这是加粗的文字***这是倾斜的文字*`***这是斜体加粗的文字***~~这是加删除线的文字~~</code></pre><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>`<br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del>  </p><h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><pre><code>&gt;这是引用的内容&gt;&gt;这是引用的内容&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</code></pre><blockquote><p>这是引用的内容</p><blockquote><p>这是引用的内容</p><blockquote><blockquote><p>这是引用的内容</p></blockquote></blockquote></blockquote></blockquote><h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><pre><code>---***</code></pre><hr><hr><h1 id="四、链接、列表-、图片等"><a href="#四、链接、列表-、图片等" class="headerlink" title="四、链接、列表 、图片等"></a>四、链接、列表 、图片等</h1><h3 id="link"><a href="#link" class="headerlink" title="link"></a>link</h3><pre><code>[超链接名](超链接地址 "超链接title")title可加可不加</code></pre><p><a href="www.baidu.com">百度</a>  </p><p>参考式</p><pre><code>我经常去的几个网站[GitHub][1]、[知乎][2]以及[简书][3][简书][3]是一个不错的[写作社区][]。[1]:https://github.com "GitHub"[2]:https://www.zhihu.com "知乎"[3]:http://www.jianshu.com "简书"[写作社区]:http://www.jianshu.com</code></pre><p>我经常去的几个网站<a href="https://github.com" target="_blank" rel="noopener" title="GitHub">GitHub</a>、<a href="https://www.zhihu.com" target="_blank" rel="noopener" title="知乎">知乎</a>以及<a href="http://www.jianshu.com" target="_blank" rel="noopener" title="简书">简书</a><br><a href="http://www.jianshu.com" target="_blank" rel="noopener" title="简书">简书</a>是一个不错的<a href="http://www.jianshu.com" target="_blank" rel="noopener">写作社区</a>。</p><h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><pre><code> ![图片Alt](图片地址 "图片Title")![](https://kirahan-blog-photobed.oss-cn-beijing.aliyuncs.com/blog/img/赵晗-183.jpg) 参考式 在文档要插入图片的地方写![图片Alt][标记] 在文档的最后写上[标记]:图片地址 "Title"</code></pre><p><img src="http://imagebed.solarsunrise.cn/blog/img/timg.jpeg" alt=""></p><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><pre><code>- 列表内容+ 列表内容* 列表内容注意：- + * 跟内容之间都要有一个空格</code></pre><ul><li>你好</li><li>你好不好</li><li>你是不是真的好</li></ul><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><pre><code>1.列表内容2.列表内容3.列表内容注意：序号跟内容之间要有空格</code></pre><ol><li>多福多寿</li><li>房价快速的减肥</li><li>划分为UI偶然间可</li></ol><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><pre><code>姓名|技能|排行--|:--:|--:刘备|哭|大哥关羽|打|二哥张飞|骂|三弟</code></pre><table><thead><tr><th>姓名</th><th align="center">技能</th><th align="right">排行</th></tr></thead><tbody><tr><td>刘备</td><td align="center">哭</td><td align="right">大哥</td></tr><tr><td>关羽</td><td align="center">打</td><td align="right">二哥</td></tr><tr><td>张飞</td><td align="center">骂</td><td align="right">三弟</td></tr></tbody></table><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><pre><code>`code`</code></pre><pre><code>    ```        code    ```</code></pre><h3 id="todo-list"><a href="#todo-list" class="headerlink" title="todo list"></a>todo list</h3><pre><code>近期任务安排:- [x] 整理Markdown手册- [ ] 改善项目   - [x] 优化首页显示方式   - [x] 修复闪退问题   - [ ] 修复视频卡顿- [ ] A3项目修复   - [x] 修复数值错误</code></pre><p>近期任务安排:</p><ul><li><input checked="" disabled="" type="checkbox"> 整理Markdown手册</li><li><input disabled="" type="checkbox"> 改善项目<ul><li><input checked="" disabled="" type="checkbox"> 优化首页显示方式</li><li><input checked="" disabled="" type="checkbox"> 修复闪退问题</li><li><input disabled="" type="checkbox"> 修复视频卡顿</li></ul></li><li><input disabled="" type="checkbox"> A3项目修复<ul><li><input checked="" disabled="" type="checkbox"> 修复数值错误</li></ul></li></ul><h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><pre><code>&lt;p&gt;这是一个P标签&lt;/p&gt;&lt;button&gt;这是一个button标签&lt;/button&gt;</code></pre><p>这是一个P标签</p><button>这是一个button标签</button><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/02/20/hello-world/"/>
+      <url>/2020/02/20/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

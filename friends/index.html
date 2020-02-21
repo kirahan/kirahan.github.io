@@ -27,7 +27,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
     
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="kirahan" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -546,14 +546,14 @@
                             <div class="card frind-card1">
                                 <div class="frind-ship">
                                     <div class="title">
-                                        <img src="http://image.luokangyuan.com/1_qq_27922023.jpg" alt="img">
+                                        <img src="" alt="img">
                                         <div>
-                                            <h1 class="friend-name">码酱</h1>
-                                            <p style="position: relative;top: -35px;">我不是大佬，只是在追寻大佬的脚步</p>
+                                            <h1 class="friend-name">廖雪峰</h1>
+                                            <p style="position: relative;top: -35px;">官方网站</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
-                                        <a href="http://luokangyuan.com/" target="_blank"
+                                        <a href="https://www.liaoxuefeng.com/" target="_blank"
                                             class="button button-glow button-rounded button-caution">
                                             前去学习
                                         </a>
@@ -570,7 +570,7 @@
                                         <img src="http://image.luokangyuan.com/4027734.jpeg" alt="img">
                                         <div>
                                             <h1 class="friend-name">闪烁之狐</h1>
-                                            <p style="position: relative;top: -35px;">编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬</p>
+                                            <p style="position: relative;top: -35px;">编程界大佬，技术牛，人还特别好</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
@@ -588,14 +588,14 @@
                             <div class="card frind-card3">
                                 <div class="frind-ship">
                                     <div class="title">
-                                        <img src="http://image.luokangyuan.com/avatar.jpg" alt="img">
+                                        <img src="http://www.ruanyifeng.com/blog/images/person2_s.jpg" alt="img">
                                         <div>
-                                            <h1 class="friend-name">ja_rome</h1>
-                                            <p style="position: relative;top: -35px;">平凡的脚步也可以走出伟大的行程</p>
+                                            <h1 class="friend-name">阮一峰</h1>
+                                            <p style="position: relative;top: -35px;">这里记录每周值得分享的科技内容，周五发布</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
-                                        <a href="https://me.csdn.net/jlh912008548" target="_blank"
+                                        <a href="http://www.ruanyifeng.com/blog/" target="_blank"
                                             class="button button-glow button-rounded button-caution">
                                             前去学习
                                         </a>
@@ -611,7 +611,25 @@
         </div>
         <div class="card">
             <div class="card-content">
-                
+                <script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
         </div>
         <div class="card">

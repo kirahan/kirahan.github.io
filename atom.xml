@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-02-20T14:07:54.554Z</updated>
+  <updated>2020-02-21T12:12:27.675Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HelloWorld</title>
-    <link href="https://kirahan.github.io/2020/02/20/HelloWorld/"/>
-    <id>https://kirahan.github.io/2020/02/20/HelloWorld/</id>
-    <published>2020-02-20T04:33:36.000Z</published>
-    <updated>2020-02-20T14:07:54.554Z</updated>
+    <title>Markdown 语法备忘</title>
+    <link href="https://kirahan.github.io/2020/02/21/markdown-yu-fa-bei-wang/"/>
+    <id>https://kirahan.github.io/2020/02/21/markdown-yu-fa-bei-wang/</id>
+    <published>2020-02-21T02:33:09.000Z</published>
+    <updated>2020-02-21T12:12:27.675Z</updated>
     
     <summary type="html">
     
@@ -29,22 +29,23 @@
       
         
         
-          &lt;h2 id=&quot;nihao&quot;&gt;&lt;a href=&quot;#nihao&quot; class=&quot;headerlink&quot; title=&quot;nihao&quot;&gt;&lt;/a&gt;nihao&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;这个是一个测试文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure
+          &lt;h1 id=&quot;一、标题&quot;&gt;&lt;a href=&quot;#一、标题&quot; class=&quot;headerlink&quot; title=&quot;一、标题&quot;&gt;&lt;/a&gt;一、标题&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;# 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+#####
         
       
     
     </summary>
     
     
+      <category term="Markdown" scheme="https://kirahan.github.io/categories/Markdown/"/>
     
-      <category term="test" scheme="https://kirahan.github.io/tags/test/"/>
     
-      <category term="codeing" scheme="https://kirahan.github.io/tags/codeing/"/>
+      <category term="markdown" scheme="https://kirahan.github.io/tags/markdown/"/>
     
-      <category term="gitalk" scheme="https://kirahan.github.io/tags/gitalk/"/>
+      <category term="笔记" scheme="https://kirahan.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
