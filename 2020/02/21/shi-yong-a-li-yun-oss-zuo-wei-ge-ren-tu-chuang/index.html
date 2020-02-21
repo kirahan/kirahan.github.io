@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="使用阿里云OSS作为个人图床, kirahan">
     <meta name="description" content="使用阿里云OSS作为个人图床使用Markdown写博客的时候，有时候会需要插入图片，markdown一般都是插入的本地图片，所以当要分享到网络上，或者上传的github上的时候会失效，解决方法一般是先将本地图片上传到图床上面。
-如果是到网页">
+果是到网页上">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -27,8 +27,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="kirahan" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="kirahan" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -481,14 +481,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    214
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -499,9 +499,64 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="使用阿里云OSS作为个人图床"><a href="#使用阿里云OSS作为个人图床" class="headerlink" title="使用阿里云OSS作为个人图床"></a>使用阿里云OSS作为个人图床</h1><p>使用Markdown写博客的时候，有时候会需要插入图片，markdown一般都是插入的本地图片，所以当要分享到网络上，或者上传的github上的时候会失效，解决方法一般是先将本地图片上传到图床上面。</p>
-<p>如果是到网页上传，再复制得到图片地址，过程会比较繁琐，好在已经有大神开发出了专门的可视化工具来简化操作——<a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener">PicGo</a>，非常好用。本文就是使用阿里云OSS配合PicGo实现图片秒传的体验。</p>
+                <h1 id="使用阿里云OSS作为个人图床"><a href="#使用阿里云OSS作为个人图床" class="headerlink" title="使用阿里云OSS作为个人图床"></a>使用阿里云OSS作为个人图床</h1><p>使用<strong>Markdown</strong>写博客的时候，有时候会需要插入图片，markdown一般都是插入的本地图片，所以当要分享到网络上，或者上传的github上的时候会失效，解决方法一般是先将本地图片上传到图床上面。</p>
+<p>果是到网页上传，再复制得到图片地址，过程会比较繁琐，好在已经有大神开发出了专门的可视化工具来简化操作——<a href="https://molunerfinn.com/PicGo/" target="_blank" rel="noopener">PicGo</a>，非常好用。本文就是使用阿里云OSS配合PicGo实现图片秒传的体验。</p>
 <h2 id="PicGo界面"><a href="#PicGo界面" class="headerlink" title="PicGo界面"></a>PicGo界面</h2><p><img src="https://cdn.jsdelivr.net/gh/Molunerfinn/test/picgo-site/first.png" alt="picgo界面"></p>
+<h2 id="PicGo支持的图床（还可以通过插件自定义图床）"><a href="#PicGo支持的图床（还可以通过插件自定义图床）" class="headerlink" title="PicGo支持的图床（还可以通过插件自定义图床）"></a>PicGo支持的图床（还可以通过插件自定义图床）</h2><ul>
+<li>SM.MS</li>
+<li><a href="https://cloud.tencent.com/" target="_blank" rel="noopener">腾讯云</a></li>
+<li>微博</li>
+<li><a href="https://www.jianshu.com/p/2756724a5dee" target="_blank" rel="noopener">Github</a></li>
+<li><a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛</a></li>
+<li><a href="http://www.imgur.com/" target="_blank" rel="noopener">Imgur</a></li>
+<li><a href="https://github.com/PicGo/Awesome-PicGo" target="_blank" rel="noopener">阿里云</a></li>
+<li><a href="https://www.upyun.com/" target="_blank" rel="noopener">又拍云</a></li>
+</ul>
+<blockquote>
+<p>PicGo的相关插件合集 <a href="https://github.com/PicGo/Awesome-PicGo" target="_blank" rel="noopener">Awesome-PicGo</a></p>
+</blockquote>
+<hr>
+<h2 id="使用阿里云OSS作为图床"><a href="#使用阿里云OSS作为图床" class="headerlink" title="使用阿里云OSS作为图床"></a>使用阿里云OSS作为图床</h2><p>先来看看PicGo中阿里云OSS的配置项<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200221233839.png" alt=""><br>通过下面四步我们就可以获得上面这些配置信息</p>
+<ol>
+<li>注册和购买阿里云OSS服务</li>
+<li>新建OSS中的bucket</li>
+<li>获取KeyID和KeySecret</li>
+<li>配置私有域名</li>
+</ol>
+<h3 id="注册和购买阿里云OSS服务"><a href="#注册和购买阿里云OSS服务" class="headerlink" title="注册和购买阿里云OSS服务"></a>注册和购买阿里云OSS服务</h3><h4 id="1-购买阿里OSS"><a href="#1-购买阿里OSS" class="headerlink" title="1. 购买阿里OSS"></a>1. 购买阿里OSS</h4><p>   OSS服务其实很便宜，一年也才几块钱，建议开发者都可以买一个<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200221220754.png" alt=""></p>
+<h4 id="2-新建OSS中的bucket"><a href="#2-新建OSS中的bucket" class="headerlink" title="2. 新建OSS中的bucket"></a>2. 新建OSS中的bucket</h4><p>   bucket相当于是一个一个独立的容器，所以一般一个应用设置一个bucket，比如这里专门建立一个bucket作为图床</p>
+<p><strong>新建bucket</strong><br>bucket名字自己设置，类型选择标准，一定不能错的是读写权限：<strong><em>公共读</em></strong><br>即只有你可以上传文件，其他人仅可以访问和读取<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200221233217.png" alt=""></p>
+<h4 id="3-获取KeyID和KeySecret"><a href="#3-获取KeyID和KeySecret" class="headerlink" title="3. 获取KeyID和KeySecret"></a>3. 获取KeyID和KeySecret</h4><p>   通过key和secret来做身份认证，也就是要填入PicGo中的关键参数，这里需要强调的是，从风险规避的角度，务必在阿里云中应该申请子用户AccessKey，通过子用户赋予这个keyid仅仅操作OSS的权限而不是完整权限的key<br>   <img src="http://imagebed.solarsunrise.cn/blog/img/20200221234114.png" alt=""></p>
+<hr>
+<p><img src="http://imagebed.solarsunrise.cn/blog/img/20200221233839.png" alt="">  </p>
+<blockquote>
+<ul>
+<li>第一项、第二项为第3步生成的keyid和keysecret  </li>
+<li>第三项就是你创建的bucket名称  </li>
+<li>第四项是OSS的存储区域，类似于使用的那个节点，结构一般都是<em>oss-cn-城市</em> 在bucket页面中可以找到</li>
+</ul>
+</blockquote>
+<p>前四项填好之后OSS图床其实已经可以工作了，我们上传一张图片：<br>图片拖动到顶部PicGo图标，等待片刻图片地址以及markdown就会自动放入剪切板，粘贴使用即可<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200221235708.png" alt=""></p>
+<p>剪贴板中信息大概如下：</p>
+<pre><code>![](http://kirahan-blog-photobed.oss-cn-beijing.aliyuncs.com/blog/img/20200221235708.png)</code></pre><h1 id="坑："><a href="#坑：" class="headerlink" title="坑："></a>坑：</h1><p>此时通过图片URL访问，会发现图片无法预览，在浏览器打开图片url会自动下载<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200222000606.png" alt=""><br>出现这种问题不是设置的问题，而是阿里云做的限制<a href="https://help.aliyun.com/document_detail/142631.html" target="_blank" rel="noopener">说明文件</a>，解决方案是配置私有域名</p>
+<blockquote>
+<p>对于图片文件（在未修改文件http头的情况下）：<br>若您的Bucket是2019年9月23日前创建的，使用OSS默认访问域名或自有域名生成的文件URL从浏览器访问时可以预览文件内容。<br>若您的Bucket是2019年9月23日后创建的，使用OSS默认域名生成的文件URL从浏览器访问时会以附件形式下载；使用自有域名生成的文件URL访问时，可以预览文件内容。绑定自有域名步骤请参见绑定自定义域名。<br><a href="https://help.aliyun.com/document_detail/142631.html" target="_blank" rel="noopener">https://help.aliyun.com/document_detail/142631.html</a></p>
+</blockquote>
+<h4 id="4-配置私有域名"><a href="#4-配置私有域名" class="headerlink" title="4. 配置私有域名"></a>4. <a href="https://help.aliyun.com/document_detail/31902.html?spm=a2c4g.11186623.2.11.55207119cNLRuT#concept-ozw-m2r-5fb" target="_blank" rel="noopener">配置私有域名</a></h4><p>绑定自定义域名的前提条件</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 拥有个人域名</li>
+<li><input disabled="" type="checkbox"> 域名已经备案</li>
+</ul>
+<p>配置步骤：</p>
+<ol>
+<li>进入目标Bucket，打开域名管理页签</li>
+<li>单击传输管理 &gt; 域名管理</li>
+<li>在绑定用户域名对话框配置以下参数<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200222001822.png" alt=""></li>
+<li>在域名解析控制台添加对应的解析记录<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200222002012.png" alt=""></li>
+<li>不要忘了在PicGo中填上你的私人域名，这样剪切板中的链接就会变成域名开头的<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200221233839.png" alt=""> </li>
+</ol>
+<hr>
+<p>最后大功告成！可以愉快的写博客了<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200222002455.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -774,7 +829,7 @@
         clientSecret: 'e177805d5c71eecdd6fcff284d33400ee396fa46',
         repo: 'gitalkcomment',
         owner: 'kirahan',
-        admin: ["kirahan"],
+        admin: "kirahan",
         id: '2020-02-21T20-37-37',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
@@ -814,7 +869,7 @@
                     <div class="summary block-with-text">
                         
                             使用阿里云OSS作为个人图床使用Markdown写博客的时候，有时候会需要插入图片，markdown一般都是插入的本地图片，所以当要分享到网络上，或者上传的github上的时候会失效，解决方法一般是先将本地图片上传到图床上面。
-如果是到网页
+果是到网页上
                         
                     </div>
                     <div class="publish-info">
