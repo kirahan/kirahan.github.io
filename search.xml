@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>配置host文件解决GitHub上图片无法加载的问题</title>
+      <link href="/2020/02/22/pei-zhi-host-wen-jian-jie-jue-github-shang-tu-pian-wu-fa-jia-zai-de-wen-ti/"/>
+      <url>/2020/02/22/pei-zhi-host-wen-jian-jie-jue-github-shang-tu-pian-wu-fa-jia-zai-de-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h1 id="配置host文件解决GitHub上图片无法加载的问题"><a href="#配置host文件解决GitHub上图片无法加载的问题" class="headerlink" title="配置host文件解决GitHub上图片无法加载的问题"></a>配置host文件解决GitHub上图片无法加载的问题</h1><p>最近在登录github网站的时候，发现很多仓库的图片没法加载或者加载速度很慢，加上梯子也不太稳定，所以配置了一下github的hosts，可以加快域名解析<br><a href="https://www.jianshu.com/p/25e5e07b2464" target="_blank" rel="noopener">类似情况</a></p><ol><li>Mac终端输入<br><code>sudo vi /etc/hosts</code></li><li>输入密码后，点击 i键，进入Insert模式，将下面内容拷贝进去<br>```<h1 id="GitHub-Start"><a href="#GitHub-Start" class="headerlink" title="GitHub Start"></a>GitHub Start</h1></li><li>30.253.112    github.com</li><li>30.253.119    gist.github.com</li><li>232.28.133    assets-cdn.github.com</li><li>232.28.133    raw.githubusercontent.com</li><li>232.28.133    gist.githubusercontent.com</li><li>232.28.133    cloud.githubusercontent.com</li><li>232.28.133    camo.githubusercontent.com</li><li>232.28.133    avatars0.githubusercontent.com</li><li>232.28.133    avatars1.githubusercontent.com</li><li>232.28.133    avatars2.githubusercontent.com</li><li>232.28.133    avatars3.githubusercontent.com</li><li>232.28.133    avatars4.githubusercontent.com</li><li>232.28.133    avatars5.githubusercontent.com</li><li>232.28.133    avatars6.githubusercontent.com</li><li>232.28.133    avatars7.githubusercontent.com</li><li>232.28.133    avatars8.githubusercontent.com<h1 id="GitHub-End"><a href="#GitHub-End" class="headerlink" title="GitHub End"></a>GitHub End</h1>```</li><li><code>wq</code> 保存退出即可</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 采坑 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 采坑 </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用阿里云OSS作为个人图床</title>
       <link href="/2020/02/21/shi-yong-a-li-yun-oss-zuo-wei-ge-ren-tu-chuang/"/>
       <url>/2020/02/21/shi-yong-a-li-yun-oss-zuo-wei-ge-ren-tu-chuang/</url>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-02-21T16:25:22.829Z</updated>
+  <updated>2020-02-22T03:55:22.052Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>配置host文件解决GitHub上图片无法加载的问题</title>
+    <link href="https://kirahan.github.io/2020/02/22/pei-zhi-host-wen-jian-jie-jue-github-shang-tu-pian-wu-fa-jia-zai-de-wen-ti/"/>
+    <id>https://kirahan.github.io/2020/02/22/pei-zhi-host-wen-jian-jie-jue-github-shang-tu-pian-wu-fa-jia-zai-de-wen-ti/</id>
+    <published>2020-02-22T03:49:09.000Z</published>
+    <updated>2020-02-22T03:55:22.052Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;配置host文件解决GitHub上图片无法加载的问题&quot;&gt;&lt;a href=&quot;#配置host文件解决GitHub上图片无法加载的问题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="采坑" scheme="https://kirahan.github.io/categories/%E9%87%87%E5%9D%91/"/>
+    
+    
+      <category term="采坑" scheme="https://kirahan.github.io/tags/%E9%87%87%E5%9D%91/"/>
+    
+      <category term="github" scheme="https://kirahan.github.io/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>使用阿里云OSS作为个人图床</title>
