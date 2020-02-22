@@ -4,10 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="配置host文件解决GitHub上图片无法加载的问题, kirahan">
-    <meta name="description" content="配置host文件解决GitHub上图片无法加载的问题最近在登录github网站的时候，发现很多仓库的图片没法加载或者加载速度很慢，加上梯子也不太稳定，所以配置了一下github的hosts，可以加快域名解析类似情况
+    <meta name="keywords" content="Mac神器Alfred配置分享, kirahan">
+    <meta name="description" content="Mac神器Alfred配置分享
+web search配置terminal 配置workflow分享workflow自制
+放弃Python（因为只支持Python2）
+使用shell
+使用Nodejs
 
-Mac终端输入sudo">
+
+        document.q">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +20,7 @@ Mac终端输入sudo">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>配置host文件解决GitHub上图片无法加载的问题 | kirahan</title>
+    <title>Mac神器Alfred配置分享 | kirahan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +311,12 @@ Mac终端输入sudo">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">配置host文件解决GitHub上图片无法加载的问题</h1>
+                    <h1 class="description center-align post-title">Mac神器Alfred配置分享</h1>
                 </div>
             </div>
         </div>
@@ -428,12 +433,24 @@ Mac终端输入sudo">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%87%87%E5%9D%91/">
-                                <span class="chip bg-color">采坑</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
-                            <a href="/tags/github/">
-                                <span class="chip bg-color">github</span>
+                            <a href="/tags/Alfred/">
+                                <span class="chip bg-color">Alfred</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/">
+                                <span class="chip bg-color">生产力</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%B3%BB%E7%BB%9F%E6%8F%92%E4%BB%B6/">
+                                <span class="chip bg-color">系统插件</span>
+                            </a>
+                        
+                            <a href="/tags/Mac/">
+                                <span class="chip bg-color">Mac</span>
                             </a>
                         
                     </div>
@@ -444,8 +461,8 @@ Mac终端输入sudo">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%87%87%E5%9D%91/" class="post-category">
-                                采坑
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
                             </a>
                         
                     </div>
@@ -457,7 +474,7 @@ Mac终端输入sudo">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-22
+                    2020-02-23
                 </div>
                 
 
@@ -466,7 +483,7 @@ Mac终端输入sudo">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    267
+                    85
                 </div>
                 
 
@@ -484,27 +501,11 @@ Mac终端输入sudo">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="配置host文件解决GitHub上图片无法加载的问题"><a href="#配置host文件解决GitHub上图片无法加载的问题" class="headerlink" title="配置host文件解决GitHub上图片无法加载的问题"></a>配置host文件解决GitHub上图片无法加载的问题</h1><p>最近在登录github网站的时候，发现很多仓库的图片没法加载或者加载速度很慢，加上梯子也不太稳定，所以配置了一下github的hosts，可以加快域名解析<br><a href="https://www.jianshu.com/p/25e5e07b2464" target="_blank" rel="noopener">类似情况</a></p>
-<ol>
-<li>Mac终端输入<br><code>sudo vi /etc/hosts</code></li>
-<li>输入密码后，点击 i键，进入Insert模式，将下面内容拷贝进去<br>```<h1 id="GitHub-Start"><a href="#GitHub-Start" class="headerlink" title="GitHub Start"></a>GitHub Start</h1></li>
-<li>30.253.112    github.com</li>
-<li>30.253.119    gist.github.com</li>
-<li>232.28.133    assets-cdn.github.com</li>
-<li>232.28.133    raw.githubusercontent.com</li>
-<li>232.28.133    gist.githubusercontent.com</li>
-<li>232.28.133    cloud.githubusercontent.com</li>
-<li>232.28.133    camo.githubusercontent.com</li>
-<li>232.28.133    avatars0.githubusercontent.com</li>
-<li>232.28.133    avatars1.githubusercontent.com</li>
-<li>232.28.133    avatars2.githubusercontent.com</li>
-<li>232.28.133    avatars3.githubusercontent.com</li>
-<li>232.28.133    avatars4.githubusercontent.com</li>
-<li>232.28.133    avatars5.githubusercontent.com</li>
-<li>232.28.133    avatars6.githubusercontent.com</li>
-<li>232.28.133    avatars7.githubusercontent.com</li>
-<li>232.28.133    avatars8.githubusercontent.com<h1 id="GitHub-End"><a href="#GitHub-End" class="headerlink" title="GitHub End"></a>GitHub End</h1>```</li>
-<li><code>wq</code> 保存退出即可</li>
+                <h1 id="Mac神器Alfred配置分享"><a href="#Mac神器Alfred配置分享" class="headerlink" title="Mac神器Alfred配置分享"></a>Mac神器Alfred配置分享</h1><p><img src="http://imagebed.solarsunrise.cn/blog/img/20200223014813.png" alt=""></p>
+<h2 id="web-search配置"><a href="#web-search配置" class="headerlink" title="web search配置"></a>web search配置</h2><h2 id="terminal-配置"><a href="#terminal-配置" class="headerlink" title="terminal 配置"></a>terminal 配置</h2><h2 id="workflow分享"><a href="#workflow分享" class="headerlink" title="workflow分享"></a>workflow分享</h2><h2 id="workflow自制"><a href="#workflow自制" class="headerlink" title="workflow自制"></a>workflow自制</h2><ol>
+<li>放弃Python（因为只支持Python2）</li>
+<li>使用shell</li>
+<li>使用Nodejs</li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -549,7 +550,7 @@ Mac终端输入sudo">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kirahan.github.io/2020/02/22/pei-zhi-host-wen-jian-jie-jue-github-shang-tu-pian-wu-fa-jia-zai-de-wen-ti/">https://kirahan.github.io/2020/02/22/pei-zhi-host-wen-jian-jie-jue-github-shang-tu-pian-wu-fa-jia-zai-de-wen-ti/</a>
+                    <a href="https://kirahan.github.io/2020/02/23/mac-shen-qi-alfred-pei-zhi-fen-xiang/">https://kirahan.github.io/2020/02/23/mac-shen-qi-alfred-pei-zhi-fen-xiang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -587,12 +588,24 @@ Mac终端输入sudo">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%87%87%E5%9D%91/">
-                                    <span class="chip bg-color">采坑</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
-                                <a href="/tags/github/">
-                                    <span class="chip bg-color">github</span>
+                                <a href="/tags/Alfred/">
+                                    <span class="chip bg-color">Alfred</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/">
+                                    <span class="chip bg-color">生产力</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%B3%BB%E7%BB%9F%E6%8F%92%E4%BB%B6/">
+                                    <span class="chip bg-color">系统插件</span>
+                                </a>
+                            
+                                <a href="/tags/Mac/">
+                                    <span class="chip bg-color">Mac</span>
                                 </a>
                             
                         </div>
@@ -763,7 +776,7 @@ Mac终端输入sudo">
         repo: 'gitalkcomment',
         owner: 'kirahan',
         admin: "kirahan",
-        id: '2020-02-22T11-49-09',
+        id: '2020-02-23T01-43-45',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -784,9 +797,10 @@ Mac终端输入sudo">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/02/23/mac-shen-qi-alfred-pei-zhi-fen-xiang/">
                     <div class="card-image">
@@ -811,9 +825,9 @@ web search配置terminal 配置workflow分享workflow自制
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -826,6 +840,7 @@ web search配置terminal 配置workflow分享workflow自制
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -860,32 +875,33 @@ web search配置terminal 配置workflow分享workflow自制
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/21/shi-yong-a-li-yun-oss-zuo-wei-ge-ren-tu-chuang/">
+                <a href="/2020/02/22/pei-zhi-host-wen-jian-jie-jue-github-shang-tu-pian-wu-fa-jia-zai-de-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="使用阿里云OSS作为个人图床">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="配置host文件解决GitHub上图片无法加载的问题">
                         
-                        <span class="card-title">使用阿里云OSS作为个人图床</span>
+                        <span class="card-title">配置host文件解决GitHub上图片无法加载的问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用阿里云OSS作为个人图床使用Markdown写博客的时候，有时候会需要插入图片，markdown一般都是插入的本地图片，所以当要分享到网络上，或者上传的github上的时候会失效，解决方法一般是先将本地图片上传到图床上面。
-果是到网页上
+                            配置host文件解决GitHub上图片无法加载的问题最近在登录github网站的时候，发现很多仓库的图片没法加载或者加载速度很慢，加上梯子也不太稳定，所以配置了一下github的hosts，可以加快域名解析类似情况
+
+Mac终端输入sudo
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/%E9%87%87%E5%9D%91/" class="post-category">
+                                    采坑
                                 </a>
                             
                             
@@ -895,28 +911,12 @@ web search配置terminal 配置workflow分享workflow自制
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/">
-                        <span class="chip bg-color">个人工具</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%BE%E5%BA%8A/">
-                        <span class="chip bg-color">图床</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%98%BF%E9%87%8COSS/">
-                        <span class="chip bg-color">阿里OSS</span>
-                    </a>
-                    
-                    <a href="/tags/PicGo/">
-                        <span class="chip bg-color">PicGo</span>
-                    </a>
-                    
                     <a href="/tags/%E9%87%87%E5%9D%91/">
                         <span class="chip bg-color">采坑</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>

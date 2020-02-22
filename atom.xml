@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-02-22T03:55:22.052Z</updated>
+  <updated>2020-02-22T17:48:43.080Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac神器Alfred配置分享</title>
+    <link href="https://kirahan.github.io/2020/02/23/mac-shen-qi-alfred-pei-zhi-fen-xiang/"/>
+    <id>https://kirahan.github.io/2020/02/23/mac-shen-qi-alfred-pei-zhi-fen-xiang/</id>
+    <published>2020-02-22T17:43:45.000Z</published>
+    <updated>2020-02-22T17:48:43.080Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Mac神器Alfred配置分享&quot;&gt;&lt;a href=&quot;#Mac神器Alfred配置分享&quot; class=&quot;headerlink&quot; title=&quot;Mac神器Alfred配置分享&quot;&gt;&lt;/a&gt;Mac神器Alfred配置分享&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://kirahan.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="笔记" scheme="https://kirahan.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Alfred" scheme="https://kirahan.github.io/tags/Alfred/"/>
+    
+      <category term="生产力" scheme="https://kirahan.github.io/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/"/>
+    
+      <category term="系统插件" scheme="https://kirahan.github.io/tags/%E7%B3%BB%E7%BB%9F%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="Mac" scheme="https://kirahan.github.io/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>配置host文件解决GitHub上图片无法加载的问题</title>
