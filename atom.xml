@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-02-22T17:48:43.080Z</updated>
+  <updated>2020-02-28T16:46:50.327Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Alfred-workflow开发排坑记录1</title>
+    <link href="https://kirahan.github.io/2020/02/29/alfred-workflow-kai-fa-pai-keng-ji-lu-1/"/>
+    <id>https://kirahan.github.io/2020/02/29/alfred-workflow-kai-fa-pai-keng-ji-lu-1/</id>
+    <published>2020-02-28T16:31:08.000Z</published>
+    <updated>2020-02-28T16:46:50.327Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;采坑记录&quot;&gt;&lt;a href=&quot;#采坑记录&quot; class=&quot;headerlink&quot; title=&quot;采坑记录&quot;&gt;&lt;/a&gt;采坑记录&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="采坑" scheme="https://kirahan.github.io/categories/%E9%87%87%E5%9D%91/"/>
+    
+    
+      <category term="个人工具" scheme="https://kirahan.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="MAC" scheme="https://kirahan.github.io/tags/MAC/"/>
+    
+      <category term="alfred" scheme="https://kirahan.github.io/tags/alfred/"/>
+    
+      <category term="采坑" scheme="https://kirahan.github.io/tags/%E9%87%87%E5%9D%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac神器Alfred配置分享</title>
@@ -39,9 +72,9 @@
       <category term="工具" scheme="https://kirahan.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="笔记" scheme="https://kirahan.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="Alfred" scheme="https://kirahan.github.io/tags/Alfred/"/>
+    
+      <category term="笔记" scheme="https://kirahan.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="生产力" scheme="https://kirahan.github.io/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/"/>
     
@@ -103,17 +136,17 @@
       <category term="工具" scheme="https://kirahan.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="笔记" scheme="https://kirahan.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="个人工具" scheme="https://kirahan.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="采坑" scheme="https://kirahan.github.io/tags/%E9%87%87%E5%9D%91/"/>
+    
+      <category term="笔记" scheme="https://kirahan.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="图床" scheme="https://kirahan.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
     
       <category term="阿里OSS" scheme="https://kirahan.github.io/tags/%E9%98%BF%E9%87%8COSS/"/>
     
       <category term="PicGo" scheme="https://kirahan.github.io/tags/PicGo/"/>
-    
-      <category term="采坑" scheme="https://kirahan.github.io/tags/%E9%87%87%E5%9D%91/"/>
     
   </entry>
   
@@ -144,9 +177,9 @@
       <category term="Markdown" scheme="https://kirahan.github.io/categories/Markdown/"/>
     
     
-      <category term="markdown" scheme="https://kirahan.github.io/tags/markdown/"/>
-    
       <category term="笔记" scheme="https://kirahan.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="markdown" scheme="https://kirahan.github.io/tags/markdown/"/>
     
   </entry>
   

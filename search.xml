@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Alfred-workflow开发排坑记录1</title>
+      <link href="/2020/02/29/alfred-workflow-kai-fa-pai-keng-ji-lu-1/"/>
+      <url>/2020/02/29/alfred-workflow-kai-fa-pai-keng-ji-lu-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="采坑记录"><a href="#采坑记录" class="headerlink" title="采坑记录"></a>采坑记录</h1><h2 id="一句话总结，建议直接看官方文档，网上的教程都不清晰，也不是最新的，很多都失效了，官方文档的说明还是很全面的。"><a href="#一句话总结，建议直接看官方文档，网上的教程都不清晰，也不是最新的，很多都失效了，官方文档的说明还是很全面的。" class="headerlink" title="一句话总结，建议直接看官方文档，网上的教程都不清晰，也不是最新的，很多都失效了，官方文档的说明还是很全面的。"></a>一句话总结，建议直接看官方文档，网上的教程都不清晰，也不是最新的，很多都失效了，官方文档的说明还是很全面的。</h2><p><img src="http://imagebed.solarsunrise.cn/blog/img/20200229004634.png" alt=""><br><a href="https://www.alfredapp.com/help/workflows/" target="_blank" rel="noopener">官方说明</a></p><ol><li>不要用python来开发，python只支持python2，不支持python3</li><li>搜索列表呈现主要选用插件     <code>ScriptFilter</code></li><li>使用nodejs，读取环境变量为<code>process.env</code>,但是只能读不能写</li><li>另外只有通过workflow启动的js脚本能读取出process.env</li><li>读取输入参数用 <code>process.argv[xx]</code></li><li>呈现ScriptFilter使用console.log() json数据接口即可，不能增加其他的console.log() 否则会出错    <code>反人类</code></li><li>ScriptFilter中icon配置项，文档中的icon.type = ‘filetype’ 是指填入具体的图片格式如 <code>png，jpg</code>等，而不是直接写filetype， <code>巨坑</code></li><li>ScriptFilter数据结构中有很多有用的参数，如自动全autocomplete，valid，甚至可以给每个item设置变量，非常强大</li><li>ScriptFilter不能用定时函数，直接用json文件中的<code>rerun</code>参数即可</li><li>插件中还有一个JSON Utility的模块，非常强大，还没来得及研究</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 采坑 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 个人工具 </tag>
+            
+            <tag> MAC </tag>
+            
+            <tag> alfred </tag>
+            
+            <tag> 采坑 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mac神器Alfred配置分享</title>
       <link href="/2020/02/23/mac-shen-qi-alfred-pei-zhi-fen-xiang/"/>
       <url>/2020/02/23/mac-shen-qi-alfred-pei-zhi-fen-xiang/</url>
@@ -20,9 +51,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> Alfred </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 生产力 </tag>
             
@@ -80,17 +111,17 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 个人工具 </tag>
+            
+            <tag> 采坑 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 图床 </tag>
             
             <tag> 阿里OSS </tag>
             
             <tag> PicGo </tag>
-            
-            <tag> 采坑 </tag>
             
         </tags>
       
@@ -115,9 +146,9 @@
       
         <tags>
             
-            <tag> markdown </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> markdown </tag>
             
         </tags>
       
