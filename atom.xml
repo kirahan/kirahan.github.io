@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-02-28T16:46:50.327Z</updated>
+  <updated>2020-02-29T09:04:46.286Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WCA官方API详解</title>
+    <link href="https://kirahan.github.io/2020/02/29/wca-guan-fang-api-xiang-jie/"/>
+    <id>https://kirahan.github.io/2020/02/29/wca-guan-fang-api-xiang-jie/</id>
+    <published>2020-02-29T04:04:56.000Z</published>
+    <updated>2020-02-29T09:04:46.286Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;WCA官方API详解&quot;&gt;&lt;a href=&quot;#WCA官方API详解&quot; class=&quot;headerlink&quot; title=&quot;WCA官方API详解&quot;&gt;&lt;/a&gt;WCA官方API详解&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;WCA是有提供API接口的，但没能在&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="WCA" scheme="https://kirahan.github.io/categories/WCA/"/>
+    
+    
+      <category term="WCA" scheme="https://kirahan.github.io/tags/WCA/"/>
+    
+      <category term="API接口" scheme="https://kirahan.github.io/tags/API%E6%8E%A5%E5%8F%A3/"/>
+    
+      <category term="魔方" scheme="https://kirahan.github.io/tags/%E9%AD%94%E6%96%B9/"/>
+    
+      <category term="文档" scheme="https://kirahan.github.io/tags/%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>Alfred-workflow开发排坑记录1</title>
