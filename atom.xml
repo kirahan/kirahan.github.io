@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-02-29T09:04:46.286Z</updated>
+  <updated>2020-03-09T14:15:22.141Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>algdb网站API整理</title>
+    <link href="https://kirahan.github.io/2020/03/09/algdb-wang-zhan-api-zheng-li/"/>
+    <id>https://kirahan.github.io/2020/03/09/algdb-wang-zhan-api-zheng-li/</id>
+    <published>2020-03-09T13:16:18.000Z</published>
+    <updated>2020-03-09T14:15:22.141Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;algdb网站API整理&quot;&gt;&lt;a href=&quot;#algdb网站API整理&quot; class=&quot;headerlink&quot; title=&quot;algdb网站API整理&quot;&gt;&lt;/a&gt;algdb网站API整理&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;不知道algdb网站是不是开源的，不过&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="采坑" scheme="https://kirahan.github.io/categories/%E9%87%87%E5%9D%91/"/>
+    
+    
+      <category term="API接口" scheme="https://kirahan.github.io/tags/API%E6%8E%A5%E5%8F%A3/"/>
+    
+      <category term="魔方" scheme="https://kirahan.github.io/tags/%E9%AD%94%E6%96%B9/"/>
+    
+      <category term="文档" scheme="https://kirahan.github.io/tags/%E6%96%87%E6%A1%A3/"/>
+    
+      <category term="algdb" scheme="https://kirahan.github.io/tags/algdb/"/>
+    
+  </entry>
   
   <entry>
     <title>WCA官方API详解</title>

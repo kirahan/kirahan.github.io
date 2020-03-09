@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>algdb网站API整理</title>
+      <link href="/2020/03/09/algdb-wang-zhan-api-zheng-li/"/>
+      <url>/2020/03/09/algdb-wang-zhan-api-zheng-li/</url>
+      
+        <content type="html"><![CDATA[<h1 id="algdb网站API整理"><a href="#algdb网站API整理" class="headerlink" title="algdb网站API整理"></a>algdb网站API整理</h1><p><strong>不知道algdb网站是不是开源的，不过<a href="http://algdb.net/" target="_blank" rel="noopener">algdb官网</a>上的数据接口是开放的，也比较简单，不需要登录即可请求，所以这里也做一个简单的整理</strong></p><h2 id="0-调试工具"><a href="#0-调试工具" class="headerlink" title="0.调试工具"></a>0.调试工具</h2><ul><li>chrome浏览器的开发者工具</li><li>postman用来模拟服务器请求</li><li>备注根地址：<code>http://cubiclealgdbserver.azurewebsites.net/</code><h2 id="1-主要接口"><a href="#1-主要接口" class="headerlink" title="1.主要接口"></a>1.主要接口</h2></li></ul><ol><li>返回puzzle列表 <code>puzzles</code></li><li>返回热门公式集   <code>topCaseGroups</code></li><li>返回网站公式数据 <code>stats</code></li><li>返回具体分类下的公式集 <code>content/caseGroup/EventName/CaseSetName</code><ol><li>二阶目录下有 cll、eg1、eg2、ortegaoll、ortegapbl</li><li>三阶目录下有12个分别是 [cmll,coll,ell,f2l,oholl,ohpll,oll,ollcp.pll,vls,wv,zbll] </li><li>sq1目录下有1个目录 ep，ep下级还有10个目录</li></ol></li></ol><h2 id="注意有的分类下还有多级目录，具体可以通过-hasChildren这个字段来判断"><a href="#注意有的分类下还有多级目录，具体可以通过-hasChildren这个字段来判断" class="headerlink" title="注意有的分类下还有多级目录，具体可以通过 hasChildren这个字段来判断"></a>注意有的分类下还有多级目录，具体可以通过 hasChildren这个字段来判断</h2><h2 id="2-返回值展示"><a href="#2-返回值展示" class="headerlink" title="2.返回值展示"></a>2.返回值展示</h2><ul><li>GET请求<code>user/content/puzzles</code> 返回puzzles列表  目前有3大类 222，333，sq1<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214305.png" alt=""></li><li>GET请求<code>user/topCaseGroups</code> 返回目前最热门的公式集  这个数据格式非常简单，字段也很少<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214537.png" alt=""></li><li>GET请求<code>user/stats</code> 返回目前网站的公式数据3个数据，分别是alg数量、case情况数、user用户数<br>返回值如下 6056algs 1592cases 5115users<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214750.png" alt=""></li><li>GET请求<code>user/content/puzzle/222</code> 返回二阶魔方的公式集分类<br>返回值如下 数据包括了二阶项目下的分类以及每个分类的图片<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215428.png" alt=""></li><li><code>user/content/caseGroup/222/cll</code> 返回二阶cll下的所有公式<br>返回值如下，字段包括名字、解法、图片<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215619.png" alt=""></li><li><code>user/content/caseGroup/222/eg1</code> 返回二阶eg1下的所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215919.png" alt=""></li><li>GET请求<code>user/content/puzzle/333</code> 返回三阶目录下的公式集分类<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221002.png" alt=""></li><li>GET请求<code>user/content/caseGroup/333/f2l</code>返回三阶f2l下的所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221113.png" alt=""></li><li>GET请求<code>user/content/puzzle/sq1</code> 返回sq1目录下所有公式集分类<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221222.png" alt=""></li><li>GET请求<code>user/content/caseGroup/sq1/solvedu</code> 返回sq1 ep中 -on U下所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221412.png" alt=""></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 采坑 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API接口 </tag>
+            
+            <tag> 魔方 </tag>
+            
+            <tag> 文档 </tag>
+            
+            <tag> algdb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>WCA官方API详解</title>
       <link href="/2020/02/29/wca-guan-fang-api-xiang-jie/"/>
       <url>/2020/02/29/wca-guan-fang-api-xiang-jie/</url>

@@ -4,9 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="WCA官方API详解, kirahan">
-    <meta name="description" content="WCA官方API详解WCA是有提供API接口的，但没能在WCA官网上找到具体的接口文档，也没有发现有谁已经整理过了，所以这里做一个简单的梳理
-0. 授权登录wca的接口都是需要授权之后才可以发送请求的，使用的是标准的Oauth2.0，稍后会">
+    <meta name="keywords" content="algdb网站API整理, kirahan">
+    <meta name="description" content="algdb网站API整理不知道algdb网站是不是开源的，不过algdb官网上的数据接口是开放的，也比较简单，不需要登录即可请求，所以这里也做一个简单的整理
+0.调试工具
+chrome浏览器的开发者工具
+postman用来模拟服务器请求
+备">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>WCA官方API详解 | kirahan</title>
+    <title>algdb网站API整理 | kirahan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">WCA官方API详解</h1>
+                    <h1 class="description center-align post-title">algdb网站API整理</h1>
                 </div>
             </div>
         </div>
@@ -427,10 +430,6 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/WCA/">
-                                <span class="chip bg-color">WCA</span>
-                            </a>
-                        
                             <a href="/tags/API%E6%8E%A5%E5%8F%A3/">
                                 <span class="chip bg-color">API接口</span>
                             </a>
@@ -443,6 +442,10 @@
                                 <span class="chip bg-color">文档</span>
                             </a>
                         
+                            <a href="/tags/algdb/">
+                                <span class="chip bg-color">algdb</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -451,8 +454,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/WCA/" class="post-category">
-                                WCA
+                            <a href="/categories/%E9%87%87%E5%9D%91/" class="post-category">
+                                采坑
                             </a>
                         
                     </div>
@@ -464,7 +467,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-29
+                    2020-03-09
                 </div>
                 
 
@@ -473,14 +476,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    561
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -491,80 +494,34 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="WCA官方API详解"><a href="#WCA官方API详解" class="headerlink" title="WCA官方API详解"></a>WCA官方API详解</h1><p><strong>WCA是有提供API接口的，但没能在<a href="https://www.worldcubeassociation.org/" target="_blank" rel="noopener">WCA官网</a>上找到具体的接口文档，也没有发现有谁已经整理过了，所以这里做一个简单的梳理</strong></p>
-<h2 id="0-授权登录"><a href="#0-授权登录" class="headerlink" title="0. 授权登录"></a>0. 授权登录</h2><p>wca的接口都是需要授权之后才可以发送请求的，使用的是标准的Oauth2.0，稍后会写一篇文档记录如何做授权登录 </p>
-<h2 id="1-参考链接"><a href="#1-参考链接" class="headerlink" title="1. 参考链接"></a>1. 参考链接</h2><p>WCA官网是用哪个ruby写的，完全看不懂，所以检索了一下<a href="https://github.com/thewca/worldcubeassociation.org" target="_blank" rel="noopener">WCA的源代码</a>，找到几个关键文件：</p>
-<ul>
-<li><a href="https://github.com/thewca/worldcubeassociation.org/blob/master/WcaOnRails/config/routes.rb" target="_blank" rel="noopener">全部路由表</a> 这里定义了所有路由，从中可以找到所有的api接口，不过没有带参数说明</li>
-<li><a href="https://github.com/thewca/worldcubeassociation.org/blob/2f2a1b591a64fcef5cfb5ad7e0ee01a1e61f4e21/WcaOnRails/app/controllers/api/v0" target="_blank" rel="noopener">API部分的controller</a> 包括api部分以及person，地理位置geocoding和competition</li>
-<li><a href="https://github.com/thewca/worldcubeassociation.org/tree/2f2a1b591a64fcef5cfb5ad7e0ee01a1e61f4e21/WcaOnRails/app/controllers" target="_blank" rel="noopener">全部controller</a> 部分接口不在api/v0中的，可以从全部的controller中找到</li>
-<li><a href="https://github.com/thewca/worldcubeassociation.org/blob/7f13c6f67c8187c0f0b5c94cbac633d2c2564b01/WcaOnRails/spec/controllers/api_controller_spec.rb" target="_blank" rel="noopener">API的spec文件</a>ruby的spec好像类似于node中的test文件，属于测试文件，其中有一些用例，也有一些参数说明，这个文件帮助很大，避免了进一步去看源码了</li>
-<li><a href="https://github.com/thewca/worldcubeassociation.org/blob/7f13c6f67c8187c0f0b5c94cbac633d2c2564b01/WcaOnRails/spec/controllers/api_competitions_controller_spec.rb" target="_blank" rel="noopener">比赛相关的spec文件</a> 包含了赛事相关的接口用例</li>
-<li><a href="https://github.com/thewca/worldcubeassociation.org/blob/7f13c6f67c8187c0f0b5c94cbac633d2c2564b01/WcaOnRails/spec/controllers/persons_controller_spec.rb" target="_blank" rel="noopener">Person相关的sepc文件</a> 包含了person模块的接口用例</li>
+                <h1 id="algdb网站API整理"><a href="#algdb网站API整理" class="headerlink" title="algdb网站API整理"></a>algdb网站API整理</h1><p><strong>不知道algdb网站是不是开源的，不过<a href="http://algdb.net/" target="_blank" rel="noopener">algdb官网</a>上的数据接口是开放的，也比较简单，不需要登录即可请求，所以这里也做一个简单的整理</strong></p>
+<h2 id="0-调试工具"><a href="#0-调试工具" class="headerlink" title="0.调试工具"></a>0.调试工具</h2><ul>
+<li>chrome浏览器的开发者工具</li>
+<li>postman用来模拟服务器请求</li>
+<li>备注根地址：<code>http://cubiclealgdbserver.azurewebsites.net/</code><h2 id="1-主要接口"><a href="#1-主要接口" class="headerlink" title="1.主要接口"></a>1.主要接口</h2></li>
 </ul>
-<h2 id="2-主要接口"><a href="#2-主要接口" class="headerlink" title="2. 主要接口"></a>2. 主要接口</h2><ul>
-<li><p><code>/me</code>  返回授权登录的用户信息【不需要传参】<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229131601.png" alt></p>
-</li>
-<li><p><code>export_public</code> 下载数据库</p>
-</li>
-<li><p><code>scramble-program</code> 获取打乱程序信息<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229132354.png" alt></p>
-</li>
-<li><p><code>search</code> 模糊查询接口,可以查询 competition、user、regulation<br>返回的可以是比赛也可以是人</p>
-</li>
-<li><p><code>/search/posts</code> 查询推送接口,<strong>[有参数][必须]</strong> <code>{q : "post's title or body"}</code> 优先搜索标题，其次搜索正文<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229134734.png" alt></p>
-</li>
-<li><p><code>/search/competitions</code> 搜索比赛接口，<strong>[有参数][必须]</strong> <code>{q : "competition"}</code><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229135311.png" alt><br>返回值中有很多有用参数：名字、id、时间、地理位置、地址、代表、主办方、项目</p>
-</li>
-<li><p><code>/search/users</code> 搜索选手接口，<strong>[有参数][必须]</strong> 一共有四种格式<br><code>{q : "usersname" or "wcaid"}</code>  一般情况只需要传字段q<br><code>{q : "emailaddress" , email:true}</code>  通过邮件地址搜索用户<br><code>{q : "usersname" or "wcaid" , persons_table : true or false}</code> 增加了persons_table，<a href="https://github.com/thewca/worldcubeassociation.org/blob/7f13c6f67c8187c0f0b5c94cbac633d2c2564b01/WcaOnRails/spec/controllers/api_controller_spec.rb#L108" target="_blank" rel="noopener">原文描述</a>是：</p>
-<blockquote>
-<p>Person without User</p>
-</blockquote>
-<p>  应该是那种有wcaid的用户吧<br><code>{q : "usersname" or "wcaid", include_dummy_accounts: true or false}</code> 增加了 include_dummy_accounts字段，dummy意思是假的，可能也是一种特殊的用户类型吧<br>返回值格式都一致<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229150346.png" alt></p>
-</li>
-<li><p><code>/search/regulations</code> 搜索比赛规则 <strong>[有参数][必须]</strong> <code>{q : "title"}</code> 可以检索标号和关键字<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229150945.png" alt></p>
-</li>
-<li><p><code>/users/:id</code> 获得用户资料   <strong>[无参数]</strong> id直接通过/:id的params形式传入，用于获取user资料<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229151854.png" alt></p>
-</li>
-<li><p><code>/users/:wca_id</code> 获取用户资料  <strong>[无参数]</strong> wcaid直接通过/:wca_id的params形式传入，用于获取user资料<br>返回值如下</p>
-<p><img src="http://imagebed.solarsunrise.cn/blog/img/20200229151854.png" alt></p>
-</li>
-<li><p><code>/delegates</code> 获取wca代表信息  <strong>[无参数]</strong><br>返回值如下</p>
-<p><img src="http://imagebed.solarsunrise.cn/blog/img/20200229152906.png" alt></p>
-</li>
-<li><p><code>/persons</code> 获取选手的比赛详情 <strong><em>区别于users和search接口中的选手资料，proson接口获取的是比赛成绩相关数据</em></strong> <strong>[有参数][可选]</strong>  有几种参数可以定义</p>
 <ol>
-<li>不含参数，会按照wcaid的先后返回数据</li>
-<li><code>params: { q: "name"}</code> 包含一个search字段，可以是名字也可以是wcaid</li>
-<li><code>params: { wca_ids: "wcaid1,wcaid2,wcaid3" }</code> 通过wcaid查询，可以是一个id也可以是多个id 用per_page=来控制个数<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229160640.png" alt></li>
+<li>返回puzzle列表 <code>puzzles</code></li>
+<li>返回热门公式集   <code>topCaseGroups</code></li>
+<li>返回网站公式数据 <code>stats</code></li>
+<li>返回具体分类下的公式集 <code>content/caseGroup/EventName/CaseSetName</code><ol>
+<li>二阶目录下有 cll、eg1、eg2、ortegaoll、ortegapbl</li>
+<li>三阶目录下有12个分别是 [cmll,coll,ell,f2l,oholl,ohpll,oll,ollcp.pll,vls,wv,zbll] </li>
+<li>sq1目录下有1个目录 ep，ep下级还有10个目录</li>
 </ol>
 </li>
-<li><p><code>/persons/:wca_id</code> 获取选手的比赛详情直接将wcaid填入url中 <strong>[无参数]</strong><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229160930.png" alt></p>
-</li>
-<li><p><code>/persons/:wca_id/results</code> 按照选手参加的赛事排序返回选手成绩 <strong>[无参数]</strong><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229161211.png" alt></p>
-</li>
-<li><p><code>/geocoding/search</code>  搜索地理位置 没看出来应该填什么参数</p>
-<pre><code>  query_params = {
-    address: params.require(:q),
-    key: ENVied.GOOGLE_MAPS_API_KEY,
-  }
-  render json: JSON.parse(RestClient.get(GMAPS_GEOCODING_URL, params: query_params).body)</code></pre></li>
-<li><p><code>/records</code> 获取所有记录，包括世界、大洲、国家 <strong>[无参数]</strong>  但是只有成绩，没有选手信息<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229162251.png" alt></p>
-<h2 id="3-赛事管理相关接口"><a href="#3-赛事管理相关接口" class="headerlink" title="3.赛事管理相关接口"></a>3.赛事管理相关接口</h2><p>api中有很多管理赛事的子接口，所以单独列出</p>
-</li>
-<li><p><code>/competitions/:competition_id</code> 获取比赛信息，直接将competition_id如：WuhanAutumn2019 填入url中 <strong>[无参数]</strong><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229164410.png" alt></p>
-</li>
-<li><p><code>/competitions/:competition_id/results</code> 获取比赛成绩 <strong>[无参数]</strong><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229165314.png" alt></p>
-</li>
-<li><p><code>/competitions/:competition_id/competitors</code>获取比赛选手名单 <strong>[无参数]</strong><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229165238.png" alt></p>
-</li>
-<li><p><code>/competitions/:competition_id/registrations</code>获取比赛报名名单 <strong>[无参数]</strong><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229165522.png" alt></p>
-</li>
-<li><p><code>/competitions/:competition_id/schedule</code>获取比赛赛程明细 <strong>[无参数]</strong><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229165157.png" alt></p>
-</li>
-<li><p><code>/competitions/:competition_id/wcif</code>获取wcif信息，需要赛事管理员权限，后续补充</p>
-</li>
-<li><p><code>/competitions/:competition_id/wcif/public</code>获取wcif公开信息 <strong>[无参数]</strong><br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200229165737.png" alt></p>
-</li>
+</ol>
+<h2 id="注意有的分类下还有多级目录，具体可以通过-hasChildren这个字段来判断"><a href="#注意有的分类下还有多级目录，具体可以通过-hasChildren这个字段来判断" class="headerlink" title="注意有的分类下还有多级目录，具体可以通过 hasChildren这个字段来判断"></a>注意有的分类下还有多级目录，具体可以通过 hasChildren这个字段来判断</h2><h2 id="2-返回值展示"><a href="#2-返回值展示" class="headerlink" title="2.返回值展示"></a>2.返回值展示</h2><ul>
+<li>GET请求<code>user/content/puzzles</code> 返回puzzles列表  目前有3大类 222，333，sq1<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214305.png" alt=""></li>
+<li>GET请求<code>user/topCaseGroups</code> 返回目前最热门的公式集  这个数据格式非常简单，字段也很少<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214537.png" alt=""></li>
+<li>GET请求<code>user/stats</code> 返回目前网站的公式数据3个数据，分别是alg数量、case情况数、user用户数<br>返回值如下 6056algs 1592cases 5115users<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214750.png" alt=""></li>
+<li>GET请求<code>user/content/puzzle/222</code> 返回二阶魔方的公式集分类<br>返回值如下 数据包括了二阶项目下的分类以及每个分类的图片<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215428.png" alt=""></li>
+<li><code>user/content/caseGroup/222/cll</code> 返回二阶cll下的所有公式<br>返回值如下，字段包括名字、解法、图片<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215619.png" alt=""></li>
+<li><code>user/content/caseGroup/222/eg1</code> 返回二阶eg1下的所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215919.png" alt=""></li>
+<li>GET请求<code>user/content/puzzle/333</code> 返回三阶目录下的公式集分类<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221002.png" alt=""></li>
+<li>GET请求<code>user/content/caseGroup/333/f2l</code>返回三阶f2l下的所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221113.png" alt=""></li>
+<li>GET请求<code>user/content/puzzle/sq1</code> 返回sq1目录下所有公式集分类<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221222.png" alt=""></li>
+<li>GET请求<code>user/content/caseGroup/sq1/solvedu</code> 返回sq1 ep中 -on U下所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221412.png" alt=""></li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -609,7 +566,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kirahan.github.io/2020/02/29/wca-guan-fang-api-xiang-jie/">https://kirahan.github.io/2020/02/29/wca-guan-fang-api-xiang-jie/</a>
+                    <a href="https://kirahan.github.io/2020/03/09/algdb-wang-zhan-api-zheng-li/">https://kirahan.github.io/2020/03/09/algdb-wang-zhan-api-zheng-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,10 +604,6 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/WCA/">
-                                    <span class="chip bg-color">WCA</span>
-                                </a>
-                            
                                 <a href="/tags/API%E6%8E%A5%E5%8F%A3/">
                                     <span class="chip bg-color">API接口</span>
                                 </a>
@@ -661,6 +614,10 @@
                             
                                 <a href="/tags/%E6%96%87%E6%A1%A3/">
                                     <span class="chip bg-color">文档</span>
+                                </a>
+                            
+                                <a href="/tags/algdb/">
+                                    <span class="chip bg-color">algdb</span>
                                 </a>
                             
                         </div>
@@ -831,7 +788,7 @@
         repo: 'gitalkcomment',
         owner: 'kirahan',
         admin: "kirahan",
-        id: '2020-02-29T12-04-56',
+        id: '2020-03-09T21-16-18',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -852,9 +809,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/09/algdb-wang-zhan-api-zheng-li/">
                     <div class="card-image">
@@ -876,9 +834,9 @@ postman用来模拟服务器请求
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -891,6 +849,7 @@ postman用来模拟服务器请求
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -921,22 +880,20 @@ postman用来模拟服务器请求
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/29/alfred-workflow-kai-fa-pai-keng-ji-lu-1/">
+                <a href="/2020/02/29/wca-guan-fang-api-xiang-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Alfred-workflow开发排坑记录1">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="WCA官方API详解">
                         
-                        <span class="card-title">Alfred-workflow开发排坑记录1</span>
+                        <span class="card-title">WCA官方API详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            采坑记录一句话总结，建议直接看官方文档，网上的教程都不清晰，也不是最新的，很多都失效了，官方文档的说明还是很全面的。官方说明
-
-不要用python来开发，python只支持python2，不支持python3
-搜索列表呈现主要选用插件   
+                            WCA官方API详解WCA是有提供API接口的，但没能在WCA官网上找到具体的接口文档，也没有发现有谁已经整理过了，所以这里做一个简单的梳理
+0. 授权登录wca的接口都是需要授权之后才可以发送请求的，使用的是标准的Oauth2.0，稍后会
                         
                     </div>
                     <div class="publish-info">
@@ -947,8 +904,8 @@ postman用来模拟服务器请求
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%87%87%E5%9D%91/" class="post-category">
-                                    采坑
+                            <a href="/categories/WCA/" class="post-category">
+                                    WCA
                                 </a>
                             
                             
@@ -958,20 +915,20 @@ postman用来模拟服务器请求
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/">
-                        <span class="chip bg-color">个人工具</span>
+                    <a href="/tags/WCA/">
+                        <span class="chip bg-color">WCA</span>
                     </a>
                     
-                    <a href="/tags/MAC/">
-                        <span class="chip bg-color">MAC</span>
+                    <a href="/tags/API%E6%8E%A5%E5%8F%A3/">
+                        <span class="chip bg-color">API接口</span>
                     </a>
                     
-                    <a href="/tags/alfred/">
-                        <span class="chip bg-color">alfred</span>
+                    <a href="/tags/%E9%AD%94%E6%96%B9/">
+                        <span class="chip bg-color">魔方</span>
                     </a>
                     
-                    <a href="/tags/%E9%87%87%E5%9D%91/">
-                        <span class="chip bg-color">采坑</span>
+                    <a href="/tags/%E6%96%87%E6%A1%A3/">
+                        <span class="chip bg-color">文档</span>
                     </a>
                     
                 </div>
