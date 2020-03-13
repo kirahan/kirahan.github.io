@@ -4,12 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="algdb网站API整理, kirahan">
-    <meta name="description" content="algdb网站API整理不知道algdb网站是不是开源的，不过algdb官网上的数据接口是开放的，也比较简单，不需要登录即可请求，所以这里也做一个简单的整理
-0.调试工具
-chrome浏览器的开发者工具
-postman用来模拟服务器请求
-备">
+    <meta name="keywords" content="visualcube修改记录, kirahan">
+    <meta name="description" content="visualcube的修改日志1.适配个人服务器
+修改visualcube.php 为 index.php
+静态文件目录加了了前缀visualcube
+
+2.修改了view为trans时候，白色底面显示的bug点我查看效果
+3.fc、sch">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@ postman用来模拟服务器请求
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>algdb网站API整理 | kirahan</title>
+    <title>visualcube修改记录 | kirahan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +309,12 @@ postman用来模拟服务器请求
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">algdb网站API整理</h1>
+                    <h1 class="description center-align post-title">visualcube修改记录</h1>
                 </div>
             </div>
         </div>
@@ -430,10 +431,6 @@ postman用来模拟服务器请求
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/API%E6%8E%A5%E5%8F%A3/">
-                                <span class="chip bg-color">API接口</span>
-                            </a>
-                        
                             <a href="/tags/%E9%AD%94%E6%96%B9/">
                                 <span class="chip bg-color">魔方</span>
                             </a>
@@ -442,8 +439,12 @@ postman用来模拟服务器请求
                                 <span class="chip bg-color">文档</span>
                             </a>
                         
-                            <a href="/tags/algdb/">
-                                <span class="chip bg-color">algdb</span>
+                            <a href="/tags/visualcube/">
+                                <span class="chip bg-color">visualcube</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%99%9A%E6%8B%9F%E9%AD%94%E6%96%B9/">
+                                <span class="chip bg-color">虚拟魔方</span>
                             </a>
                         
                     </div>
@@ -454,8 +455,8 @@ postman用来模拟服务器请求
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%87%87%E5%9D%91/" class="post-category">
-                                采坑
+                            <a href="/categories/%E9%AD%94%E6%96%B9/" class="post-category">
+                                魔方
                             </a>
                         
                     </div>
@@ -467,7 +468,7 @@ postman用来模拟服务器请求
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-09
+                    2020-03-13
                 </div>
                 
 
@@ -476,14 +477,14 @@ postman用来模拟服务器请求
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    561
+                    251
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -494,35 +495,18 @@ postman用来模拟服务器请求
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="algdb网站API整理"><a href="#algdb网站API整理" class="headerlink" title="algdb网站API整理"></a>algdb网站API整理</h1><p><strong>不知道algdb网站是不是开源的，不过<a href="http://algdb.net/" target="_blank" rel="noopener">algdb官网</a>上的数据接口是开放的，也比较简单，不需要登录即可请求，所以这里也做一个简单的整理</strong></p>
-<h2 id="0-调试工具"><a href="#0-调试工具" class="headerlink" title="0.调试工具"></a>0.调试工具</h2><ul>
-<li>chrome浏览器的开发者工具</li>
-<li>postman用来模拟服务器请求</li>
-<li>备注根地址：<code>http://cubiclealgdbserver.azurewebsites.net/</code><h2 id="1-主要接口"><a href="#1-主要接口" class="headerlink" title="1.主要接口"></a>1.主要接口</h2></li>
+                <h1 id="visualcube的修改日志"><a href="#visualcube的修改日志" class="headerlink" title="visualcube的修改日志"></a>visualcube的修改日志</h1><h2 id="1-适配个人服务器"><a href="#1-适配个人服务器" class="headerlink" title="1.适配个人服务器"></a>1.适配个人服务器</h2><ul>
+<li>修改visualcube.php 为 index.php</li>
+<li>静态文件目录加了了前缀visualcube</li>
 </ul>
-<ol>
-<li>返回puzzle列表 <code>puzzles</code></li>
-<li>返回热门公式集   <code>topCaseGroups</code></li>
-<li>返回网站公式数据 <code>stats</code></li>
-<li>返回具体分类下的公式集 <code>content/caseGroup/EventName/CaseSetName</code><ol>
-<li>二阶目录下有 cll、eg1、eg2、ortegaoll、ortegapbl</li>
-<li>三阶目录下有12个分别是 [cmll,coll,ell,f2l,oholl,ohpll,oll,ollcp.pll,vls,wv,zbll] </li>
-<li>sq1目录下有1个目录 ep，ep下级还有10个目录</li>
-</ol>
-</li>
-</ol>
-<h2 id="注意有的分类下还有多级目录，具体可以通过-hasChildren这个字段来判断"><a href="#注意有的分类下还有多级目录，具体可以通过-hasChildren这个字段来判断" class="headerlink" title="注意有的分类下还有多级目录，具体可以通过 hasChildren这个字段来判断"></a>注意有的分类下还有多级目录，具体可以通过 hasChildren这个字段来判断</h2><h2 id="2-返回值展示"><a href="#2-返回值展示" class="headerlink" title="2.返回值展示"></a>2.返回值展示</h2><ul>
-<li>GET请求<code>user/content/puzzles</code> 返回puzzles列表  目前有3大类 222，333，sq1<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214305.png" alt=""></li>
-<li>GET请求<code>user/topCaseGroups</code> 返回目前最热门的公式集  这个数据格式非常简单，字段也很少<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214537.png" alt=""></li>
-<li>GET请求<code>user/stats</code> 返回目前网站的公式数据3个数据，分别是alg数量、case情况数、user用户数<br>返回值如下 6056algs 1592cases 5115users<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309214750.png" alt=""></li>
-<li>GET请求<code>user/content/puzzle/222</code> 返回二阶魔方的公式集分类<br>返回值如下 数据包括了二阶项目下的分类以及每个分类的图片<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215428.png" alt=""></li>
-<li><code>user/content/caseGroup/222/cll</code> 返回二阶cll下的所有公式<br>返回值如下，字段包括名字、解法、图片<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215619.png" alt=""></li>
-<li><code>user/content/caseGroup/222/eg1</code> 返回二阶eg1下的所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309215919.png" alt=""></li>
-<li>GET请求<code>user/content/puzzle/333</code> 返回三阶目录下的公式集分类<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221002.png" alt=""></li>
-<li>GET请求<code>user/content/caseGroup/333/f2l</code>返回三阶f2l下的所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221113.png" alt=""></li>
-<li>GET请求<code>user/content/puzzle/sq1</code> 返回sq1目录下所有公式集分类<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221222.png" alt=""></li>
-<li>GET请求<code>user/content/caseGroup/sq1/solvedu</code> 返回sq1 ep中 -on U下所有公式<br>返回值如下<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200309221412.png" alt=""></li>
-</ul>
+<h2 id="2-修改了view为trans时候，白色底面显示的bug"><a href="#2-修改了view为trans时候，白色底面显示的bug" class="headerlink" title="2.修改了view为trans时候，白色底面显示的bug"></a>2.修改了view为trans时候，白色底面显示的bug</h2><p><a href="http://solarsunrise.cn/index.php?fmt=svg&amp;bg=t&amp;view=trans&amp;sch=ygrwbo&amp;r=y30x-30&amp;stage=cross&amp;size=500" target="_blank" rel="noopener">点我查看效果</a><br><img src="http://solarsunrise.cn/index.php?fmt=svg&amp;bg=t&amp;view=trans&amp;sch=ygrwbo&amp;r=y30x-30&amp;stage=cross&amp;size=500" alt></p>
+<h2 id="3-fc、sch、fd可以使用数字代表参数重复-方便快速涂色"><a href="#3-fc、sch、fd可以使用数字代表参数重复-方便快速涂色" class="headerlink" title="3.fc、sch、fd可以使用数字代表参数重复,方便快速涂色"></a>3.fc、sch、fd可以使用数字代表参数重复,方便快速涂色</h2><p><code>&amp;fc=y10o20b30</code> <a href="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;fc=y10o20b30" target="_blank" rel="noopener">点我查看效果</a><br><img src="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;fc=y10o20b30" alt></p>
+<p><code>&amp;sch=y2o2b2</code> <a href="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;sch=y2o2b2&amp;view=plan" target="_blank" rel="noopener">点我查看效果</a>  </p>
+<p><img src="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;sch=y2o2b2&amp;view=plan" alt></p>
+<h2 id="4-alg-和-case支持-括号表示重复"><a href="#4-alg-和-case支持-括号表示重复" class="headerlink" title="4.alg 和 case支持 括号表示重复"></a>4.alg 和 case支持 括号表示重复</h2><p><code>alg=(RUR'U')5</code> <a href="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=3&amp;alg=(R%20UR%27U%27)5" target="_blank" rel="noopener">点我查看效果</a><br><img src="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=3&amp;alg=(R%20UR%27U%27)5" alt></p>
+<h2 id="5-alg-和-case-对高阶魔方的支持-中间单层-如-4R-4U"><a href="#5-alg-和-case-对高阶魔方的支持-中间单层-如-4R-4U" class="headerlink" title="5. alg 和 case 对高阶魔方的支持 中间单层 如 4R 4U"></a>5. alg 和 case 对高阶魔方的支持 中间单层 如 4R 4U</h2><p><code>&amp;alg= 4R 5U</code> 4R前面空格不能省略 <a href="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;alg=%204R%205U" target="_blank" rel="noopener">点我查看效果</a><br><img src="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;alg=%204R%205U" alt></p>
+<h2 id="6-alg-和-case-对高阶魔方的支持-中间多层-如-3-4r-2-5u’-2-4f2"><a href="#6-alg-和-case-对高阶魔方的支持-中间多层-如-3-4r-2-5u’-2-4f2" class="headerlink" title="6. alg 和 case 对高阶魔方的支持 中间多层 如 3-4r 2-5u’ 2-4f2"></a>6. alg 和 case 对高阶魔方的支持 中间多层 如 3-4r 2-5u’ 2-4f2</h2><p><code>&amp;alg=3-4r 2-5u'</code> <a href="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;alg&amp;alg=alg=3-4r%202-5u%27" target="_blank" rel="noopener">点我查看效果</a><br><img src="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;alg&amp;alg=alg=3-4r%202-5u%27" alt></p>
+<p><code>&amp;alg=2-4f2</code> <a href="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;alg&amp;alg=2-4f2" target="_blank" rel="noopener">点我查看效果</a><br><img src="http://solarsunrise.cn/index.php?fmt=svg&amp;size=500&amp;pzl=7&amp;alg&amp;alg=2-4f2" alt></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -566,7 +550,7 @@ postman用来模拟服务器请求
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kirahan.github.io/2020/03/09/algdb-wang-zhan-api-zheng-li/">https://kirahan.github.io/2020/03/09/algdb-wang-zhan-api-zheng-li/</a>
+                    <a href="https://kirahan.github.io/2020/03/13/visualcube-xiu-gai-ji-lu/">https://kirahan.github.io/2020/03/13/visualcube-xiu-gai-ji-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -604,10 +588,6 @@ postman用来模拟服务器请求
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/API%E6%8E%A5%E5%8F%A3/">
-                                    <span class="chip bg-color">API接口</span>
-                                </a>
-                            
                                 <a href="/tags/%E9%AD%94%E6%96%B9/">
                                     <span class="chip bg-color">魔方</span>
                                 </a>
@@ -616,8 +596,12 @@ postman用来模拟服务器请求
                                     <span class="chip bg-color">文档</span>
                                 </a>
                             
-                                <a href="/tags/algdb/">
-                                    <span class="chip bg-color">algdb</span>
+                                <a href="/tags/visualcube/">
+                                    <span class="chip bg-color">visualcube</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%99%9A%E6%8B%9F%E9%AD%94%E6%96%B9/">
+                                    <span class="chip bg-color">虚拟魔方</span>
                                 </a>
                             
                         </div>
@@ -788,7 +772,7 @@ postman用来模拟服务器请求
         repo: 'gitalkcomment',
         owner: 'kirahan',
         admin: "kirahan",
-        id: '2020-03-09T21-16-18',
+        id: '2020-03-13T17-32-16',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -809,9 +793,10 @@ postman用来模拟服务器请求
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/13/visualcube-xiu-gai-ji-lu/">
                     <div class="card-image">
@@ -834,9 +819,9 @@ postman用来模拟服务器请求
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -849,6 +834,7 @@ postman用来模拟服务器请求
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -879,32 +865,35 @@ postman用来模拟服务器请求
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/29/wca-guan-fang-api-xiang-jie/">
+                <a href="/2020/03/09/algdb-wang-zhan-api-zheng-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="WCA官方API详解">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="algdb网站API整理">
                         
-                        <span class="card-title">WCA官方API详解</span>
+                        <span class="card-title">algdb网站API整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            WCA官方API详解WCA是有提供API接口的，但没能在WCA官网上找到具体的接口文档，也没有发现有谁已经整理过了，所以这里做一个简单的梳理
-0. 授权登录wca的接口都是需要授权之后才可以发送请求的，使用的是标准的Oauth2.0，稍后会
+                            algdb网站API整理不知道algdb网站是不是开源的，不过algdb官网上的数据接口是开放的，也比较简单，不需要登录即可请求，所以这里也做一个简单的整理
+0.调试工具
+chrome浏览器的开发者工具
+postman用来模拟服务器请求
+备
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/WCA/" class="post-category">
-                                    WCA
+                            <a href="/categories/%E9%87%87%E5%9D%91/" class="post-category">
+                                    采坑
                                 </a>
                             
                             
@@ -913,10 +902,6 @@ postman用来模拟服务器请求
                 </div>
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/WCA/">
-                        <span class="chip bg-color">WCA</span>
-                    </a>
                     
                     <a href="/tags/API%E6%8E%A5%E5%8F%A3/">
                         <span class="chip bg-color">API接口</span>
@@ -928,6 +913,10 @@ postman用来模拟服务器请求
                     
                     <a href="/tags/%E6%96%87%E6%A1%A3/">
                         <span class="chip bg-color">文档</span>
+                    </a>
+                    
+                    <a href="/tags/algdb/">
+                        <span class="chip bg-color">algdb</span>
                     </a>
                     
                 </div>

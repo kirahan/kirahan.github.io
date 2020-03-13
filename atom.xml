@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-03-09T14:15:22.141Z</updated>
+  <updated>2020-03-13T09:33:27.977Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>visualcube修改记录</title>
+    <link href="https://kirahan.github.io/2020/03/13/visualcube-xiu-gai-ji-lu/"/>
+    <id>https://kirahan.github.io/2020/03/13/visualcube-xiu-gai-ji-lu/</id>
+    <published>2020-03-13T09:32:16.000Z</published>
+    <updated>2020-03-13T09:33:27.977Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;visualcube的修改日志&quot;&gt;&lt;a href=&quot;#visualcube的修改日志&quot; class=&quot;headerlink&quot; title=&quot;visualcube的修改日志&quot;&gt;&lt;/a&gt;visualcube的修改日志&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="魔方" scheme="https://kirahan.github.io/categories/%E9%AD%94%E6%96%B9/"/>
+    
+    
+      <category term="魔方" scheme="https://kirahan.github.io/tags/%E9%AD%94%E6%96%B9/"/>
+    
+      <category term="文档" scheme="https://kirahan.github.io/tags/%E6%96%87%E6%A1%A3/"/>
+    
+      <category term="visualcube" scheme="https://kirahan.github.io/tags/visualcube/"/>
+    
+      <category term="虚拟魔方" scheme="https://kirahan.github.io/tags/%E8%99%9A%E6%8B%9F%E9%AD%94%E6%96%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>algdb网站API整理</title>
