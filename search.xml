@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>基于nestjs的API后端-algdb公式网站数据缓存</title>
+      <link href="/2020/03/28/ji-yu-nestjs-de-api-hou-duan-algdb-gong-shi-wang-zhan-shu-ju-huan-cun/"/>
+      <url>/2020/03/28/ji-yu-nestjs-de-api-hou-duan-algdb-gong-shi-wang-zhan-shu-ju-huan-cun/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Algdb数据的国内备份"><a href="#Algdb数据的国内备份" class="headerlink" title="Algdb数据的国内备份"></a>Algdb数据的国内备份</h1><h2 id="解决国内访问algdb缓慢的问题，每日更新，数据格式与algdb保持一致"><a href="#解决国内访问algdb缓慢的问题，每日更新，数据格式与algdb保持一致" class="headerlink" title="解决国内访问algdb缓慢的问题，每日更新，数据格式与algdb保持一致"></a>解决国内访问algdb缓慢的问题，每日更新，数据格式与algdb保持一致</h2><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ol><li>typescript</li><li>nestjs</li><li>mongodb</li><li>swagger</li></ol><h2 id="使用TS语言开发的纯API后端"><a href="#使用TS语言开发的纯API后端" class="headerlink" title="使用TS语言开发的纯API后端"></a>使用TS语言开发的纯API后端</h2><ul><li>使用了ts在vs code上有了很完善的类型提示</li><li>数据部分由python爬虫爬取</li><li>利用了nestjs集成的swagger自动生成了api文档页面<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200328010836.png" alt=""></li></ul><h2 id="技术细节记录"><a href="#技术细节记录" class="headerlink" title="技术细节记录"></a>技术细节记录</h2><p>主要使用了nestjs的nestjs-typegoose 和 @typegoose/typegoose 这两个包<br>typegoose取代了mongoose 编程风格更加组件化</p><ol><li>typegoose取代了mongoose<br>由于mongodb使用了账号密码，所以mongodb连接跟平时不一样<br>使用mongoose直接使用连接参数连接，mongod://user:name@localhost:port/dbname<br>使用@typegoose/typegoose<pre><code>let algconn =  mongoose.createconnection('mongodb://user:pwd@localhost:27017/test',{useNewUrlParser:true,useFindAndModify:false,useCreateIndex:true})</code></pre>需要通过类来导入<pre><code>class Puzzle { @prop() public puzzle?:string}</code></pre></li></ol><p>export const PuzzleModule = getModelForClass(Puzzle)</p><pre><code>查询文档得知模型参数也是通过修饰符来传入的[文档说明](https://typegoose.github.io/typegoose/docs/decorators/modelOptions/#Options)格式为  其中关于mongoose的参数schemaoptions可以配置下面的参数[mongoose说明页面](https://mongoosejs.com/docs/guide.html#options)![](http://imagebed.solarsunrise.cn/blog/img/20200328013421.png)</code></pre><p>@modelOptions({<br>     schemaOptions:{collection:’puzzles’},<br> })</p><pre><code>2. 使用更加nestjs风格的组件化开发方式，降低耦合  model文件中不使用getModelForClass  [Using Typegoose removes the need for having a Model interface.](https://www.npmjs.com/package/nestjs-typegoose)步骤- model.ts文件中仅仅生成模型类- module.ts中通过imports，注入TypegooseModule.forRoot()- module.ts通过TypegooseModule.forFeature([modelname])导出- controller.ts通过类的初始化constructor中通过injectmodel来引入  - @InjectModel(modelname) private readonly modelnameModel: ReturnModelType&lt;typeof modelname&gt;  - 最后的使用都用InjectModel的 modelnameModel3. 代码风格![](http://imagebed.solarsunrise.cn/blog/img/20200328014624.png)![](http://imagebed.solarsunrise.cn/blog/img/20200328014504.png)-------------&lt;h1&gt;algdb China&lt;/h1&gt;&lt;p&gt;algdb数据的国内缓存，解决国内访问algdb缓慢的问题，每日更新，数据格式与algdb保持一致&lt;/p&gt;&lt;h3&gt;接口文档&lt;/h3&gt;&lt;li&gt;&lt;a href="api-docs"&gt;/api-docs&lt;/a&gt;&lt;/li&gt;&lt;h3&gt;例子&lt;/h3&gt;&lt;li&gt;&lt;a href="algdb/puzzles"&gt;获取收录魔方种类/puzzles&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="algdb/topcasegroups"&gt;获取热门case/topcasegroups&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="algdb/stats"&gt;获取algdb网站统计/stats&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="algdb/puzzleset"&gt;获取set公式集合列表/puzzleset&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="algdb/puzzlesubset"&gt;获取subset子公式集列表/puzzlesubset&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="algdb/puzzlesubset?set=vls"&gt;获取subset子公式集列表如vls/puzzlesubset?set=vls&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="algdb/casegroup"&gt;获取casegroup列表/casegroup&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="algdb/case"&gt;获取每个case的数据/case&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="algdb/case?case=f2l1"&gt;获取f2l1数据/case?case=f2l1&lt;/a&gt;&lt;/li&gt;&lt;h3&gt;query参数&lt;/h3&gt;&lt;p&gt;大部分接口都支持分页操作&lt;/p&gt;&lt;p&gt;格式：algdb/name?size=50&amp;page=1&lt;/p&gt;&lt;p&gt;部分接口可以精确查询，具体可在文档中看到&lt;/p&gt;&lt;h3&gt;反馈&lt;/h3&gt;&lt;a &gt;hanzhaoapply@gmail.com&lt;/a&gt;&lt;a target="_blank" href="https://github.com/kirahan" about&gt;github: kirahan&lt;/a&gt;&lt;a target="_blank" href="https://kirahan.github.io"&gt;个人博客&lt;/a&gt;&lt;h1&gt;enjoy!&lt;/h1&gt;</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algdb </tag>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 开发 </tag>
+            
+            <tag> typescript </tag>
+            
+            <tag> nestjs </tag>
+            
+            <tag> api开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>新电脑安装配置总结</title>
       <link href="/2020/03/22/xin-dian-nao-an-zhuang-pei-zhi-zong-jie/"/>
       <url>/2020/03/22/xin-dian-nao-an-zhuang-pei-zhi-zong-jie/</url>
