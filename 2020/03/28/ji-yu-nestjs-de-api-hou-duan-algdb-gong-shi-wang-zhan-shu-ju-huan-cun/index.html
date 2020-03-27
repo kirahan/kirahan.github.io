@@ -487,14 +487,14 @@ swagger
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    894
+                    592
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -522,61 +522,58 @@ swagger
 useNewUrlParser:true,
 useFindAndModify:false,
 useCreateIndex:true
-})</code></pre>需要通过类来导入<pre><code>class Puzzle {
- @prop()
- public puzzle?:string
-}
-</code></pre></li>
+})</code></pre></li>
 </ol>
-<p>export const PuzzleModule = getModelForClass(Puzzle)</p>
-<pre><code>查询文档得知模型参数也是通过修饰符来传入的
-[文档说明](https://typegoose.github.io/typegoose/docs/decorators/modelOptions/#Options)
-格式为  
-其中关于mongoose的参数schemaoptions可以配置下面的参数
-[mongoose说明页面](https://mongoosejs.com/docs/guide.html#options)
-![](http://imagebed.solarsunrise.cn/blog/img/20200328013421.png)</code></pre><p>@modelOptions({<br>     schemaOptions:{collection:’puzzles’},<br> })</p>
-<pre><code>
-2. 使用更加nestjs风格的组件化开发方式，降低耦合  
-
-model文件中不使用getModelForClass  
-[Using Typegoose removes the need for having a Model interface.](https://www.npmjs.com/package/nestjs-typegoose)
-步骤
-- model.ts文件中仅仅生成模型类
-- module.ts中通过imports，注入TypegooseModule.forRoot()
-- module.ts通过TypegooseModule.forFeature([modelname])导出
-- controller.ts通过类的初始化constructor中通过injectmodel来引入
-  - @InjectModel(modelname) private readonly modelnameModel: ReturnModelType&lt;typeof modelname&gt;
-  - 最后的使用都用InjectModel的 modelnameModel
-
-3. 代码风格
-![](http://imagebed.solarsunrise.cn/blog/img/20200328014624.png)
-![](http://imagebed.solarsunrise.cn/blog/img/20200328014504.png)
-
--------------
-
-&lt;h1&gt;algdb China&lt;/h1&gt;
-&lt;p&gt;algdb数据的国内缓存，解决国内访问algdb缓慢的问题，每日更新，数据格式与algdb保持一致&lt;/p&gt;
-&lt;h3&gt;接口文档&lt;/h3&gt;
-&lt;li&gt;&lt;a href="api-docs"&gt;/api-docs&lt;/a&gt;&lt;/li&gt;
-&lt;h3&gt;例子&lt;/h3&gt;
-&lt;li&gt;&lt;a href="algdb/puzzles"&gt;获取收录魔方种类/puzzles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="algdb/topcasegroups"&gt;获取热门case/topcasegroups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="algdb/stats"&gt;获取algdb网站统计/stats&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="algdb/puzzleset"&gt;获取set公式集合列表/puzzleset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="algdb/puzzlesubset"&gt;获取subset子公式集列表/puzzlesubset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="algdb/puzzlesubset?set=vls"&gt;获取subset子公式集列表如vls/puzzlesubset?set=vls&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="algdb/casegroup"&gt;获取casegroup列表/casegroup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="algdb/case"&gt;获取每个case的数据/case&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="algdb/case?case=f2l1"&gt;获取f2l1数据/case?case=f2l1&lt;/a&gt;&lt;/li&gt;
-&lt;h3&gt;query参数&lt;/h3&gt;
-&lt;p&gt;大部分接口都支持分页操作&lt;/p&gt;
-&lt;p&gt;格式：algdb/name?size=50&amp;page=1&lt;/p&gt;
-&lt;p&gt;部分接口可以精确查询，具体可在文档中看到&lt;/p&gt;
-&lt;h3&gt;反馈&lt;/h3&gt;
-&lt;a &gt;hanzhaoapply@gmail.com&lt;/a&gt;
-&lt;a target="_blank" href="https://github.com/kirahan" about&gt;github: kirahan&lt;/a&gt;
-&lt;a target="_blank" href="https://kirahan.github.io"&gt;个人博客&lt;/a&gt;
-&lt;h1&gt;enjoy!&lt;/h1&gt;</code></pre><script>
+<p>需要通过类来导入</p>
+<pre><code>class Puzzle {
+    @prop()
+    public puzzle?:string
+}
+export const PuzzleModule = getModelForClass(Puzzle)</code></pre><p>查询文档得知模型参数也是通过修饰符来传入的<br><a href="https://typegoose.github.io/typegoose/docs/decorators/modelOptions/#Options" target="_blank" rel="noopener">文档说明</a><br>格式为<br>其中关于mongoose的参数schemaoptions可以配置下面的参数<br><a href="https://mongoosejs.com/docs/guide.html#options" target="_blank" rel="noopener">mongoose说明页面</a><br><img src="http://imagebed.solarsunrise.cn/blog/img/20200328013421.png" alt=""></p>
+<pre><code>@modelOptions({
+     schemaOptions:{collection:'puzzles'},
+ })</code></pre><ol start="2">
+<li>使用更加nestjs风格的组件化开发方式，降低耦合  </li>
+</ol>
+<p>model文件中不使用getModelForClass<br><a href="https://www.npmjs.com/package/nestjs-typegoose" target="_blank" rel="noopener">Using Typegoose removes the need for having a Model interface.</a><br>步骤</p>
+<ul>
+<li>model.ts文件中仅仅生成模型类</li>
+<li>module.ts中通过imports，注入TypegooseModule.forRoot()</li>
+<li>module.ts通过TypegooseModule.forFeature([modelname])导出</li>
+<li>controller.ts通过类的初始化constructor中通过injectmodel来引入<ul>
+<li>@InjectModel(modelname) private readonly modelnameModel: ReturnModelType<typeof modelname=""></typeof></li>
+<li>最后的使用都用InjectModel的 modelnameModel</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>代码风格<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200328014624.png" alt=""><br><img src="http://imagebed.solarsunrise.cn/blog/img/20200328014504.png" alt=""></li>
+</ol>
+<hr>
+<h1>algdb China</h1>
+<p>algdb数据的国内缓存，解决国内访问algdb缓慢的问题，每日更新，数据格式与algdb保持一致</p>
+<h3>接口文档</h3>
+<li><a href="api-docs">/api-docs</a></li>
+<h3>例子</h3>
+<li><a href="algdb/puzzles">获取收录魔方种类/puzzles</a></li>
+<li><a href="algdb/topcasegroups">获取热门case/topcasegroups</a></li>
+<li><a href="algdb/stats">获取algdb网站统计/stats</a></li>
+<li><a href="algdb/puzzleset">获取set公式集合列表/puzzleset</a></li>
+<li><a href="algdb/puzzlesubset">获取subset子公式集列表/puzzlesubset</a></li>
+<li><a href="algdb/puzzlesubset?set=vls">获取subset子公式集列表如vls/puzzlesubset?set=vls</a></li>
+<li><a href="algdb/casegroup">获取casegroup列表/casegroup</a></li>
+<li><a href="algdb/case">获取每个case的数据/case</a></li>
+<li><a href="algdb/case?case=f2l1">获取f2l1数据/case?case=f2l1</a></li>
+<h3>query参数</h3>
+<p>大部分接口都支持分页操作</p>
+<p>格式：algdb/name?size=50&amp;page=1</p>
+<p>部分接口可以精确查询，具体可在文档中看到</p>
+<h3>反馈</h3>
+<a>hanzhaoapply@gmail.com</a>
+<a target="_blank" href="https://github.com/kirahan" about="">github: kirahan</a>
+<a target="_blank" href="https://kirahan.github.io">个人博客</a>
+<h1>enjoy!</h1>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
