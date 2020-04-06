@@ -5,10 +5,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="webgl相关技术记录, kirahan">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="description" content="webgl相关技术记录总结最近在开发Algdb Player，这是一个带动画播放的公式收集网站
+主要技术栈
+vuejs
+typesript
+three.js
+vuetify
+
+three.js在网页上呈现3d效果主要依赖 Three.js
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -427,9 +432,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%87%87%E5%9D%91/">
+                                <span class="chip bg-color">采坑</span>
+                            </a>
+                        
+                            <a href="/tags/algdb/">
+                                <span class="chip bg-color">algdb</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">开发</span>
+                            </a>
+                        
+                            <a href="/tags/typescript/">
+                                <span class="chip bg-color">typescript</span>
+                            </a>
+                        
+                            <a href="/tags/webglrender/">
+                                <span class="chip bg-color">webglrender</span>
+                            </a>
+                        
+                            <a href="/tags/three-js/">
+                                <span class="chip bg-color">three.js</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -450,7 +479,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    473
                 </div>
                 
 
@@ -468,7 +497,30 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="webgl相关技术记录总结"><a href="#webgl相关技术记录总结" class="headerlink" title="webgl相关技术记录总结"></a>webgl相关技术记录总结</h1><p>最近在开发Algdb Player，这是一个带动画播放的公式收集网站</p>
+<h2 id="主要技术栈"><a href="#主要技术栈" class="headerlink" title="主要技术栈"></a>主要技术栈</h2><ol>
+<li>vuejs</li>
+<li>typesript</li>
+<li>three.js</li>
+<li>vuetify</li>
+</ol>
+<h2 id="three-js"><a href="#three-js" class="headerlink" title="three.js"></a>three.js</h2><p>在网页上呈现3d效果主要依赖 <a href="https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene" target="_blank" rel="noopener">Three.js</a></p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>algdb player有一个页面是呈现各种魔方状态的界面，希望这个页面可以展示出很多魔方。<br>但是实际开发中发现不能简单粗暴的实例化很多模型，因为保护机制webgl不能无限制绘制，<br>当实例绘制过多的时候，webgl会自动丢弃掉之前绘制的context。</p>
+<p>比如一个有41个F2L公式的页面，直接渲染绘制3D模型最多绘制10多个模型</p>
+<h3 id="优化1"><a href="#优化1" class="headerlink" title="优化1"></a>优化1</h3><p>使用一个render来绘制模型，而不是每个模型独立分配模型<br>结果： <strong><em>稍微有一点改善，但是效果任不理想</em></strong><br>可以成功渲染差不多20多个，但是还是有一半无法渲染<br>说明主要问题不是render过多而是绘制的context过多了</p>
+<h3 id="优化2"><a href="#优化2" class="headerlink" title="优化2"></a>优化2</h3><ol>
+<li>加载模型的时候渲染第一帧</li>
+<li>保存第一帧图片</li>
+<li>删除canvas，插入img标签，保证canvas和img样式一致</li>
+<li>清除上下文，清除render</li>
+<li>当鼠标移入的时候，重新生成render</li>
+<li>重绘canvas、隐藏img标签</li>
+<li>执行相关操作如： 拖拽，旋转，触摸等</li>
+<li>鼠标移除时候自动更新最后一帧的图片到img标签中</li>
+<li>重新设置img标签的display样式，删除canvas、清除renderer</li>
+</ol>
+<p>最终效果：<strong>可以在页面中渲染除非常非常多的魔方，而且体验上几乎看不出来区别</strong><br><img src="http://imagebed.solarsunrise.cn/blog/img/20200406184210.png" alt=""></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -548,7 +600,31 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%87%87%E5%9D%91/">
+                                    <span class="chip bg-color">采坑</span>
+                                </a>
+                            
+                                <a href="/tags/algdb/">
+                                    <span class="chip bg-color">algdb</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">开发</span>
+                                </a>
+                            
+                                <a href="/tags/typescript/">
+                                    <span class="chip bg-color">typescript</span>
+                                </a>
+                            
+                                <a href="/tags/webglrender/">
+                                    <span class="chip bg-color">webglrender</span>
+                                </a>
+                            
+                                <a href="/tags/three-js/">
+                                    <span class="chip bg-color">three.js</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -755,10 +831,15 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            webgl相关技术记录总结最近在开发Algdb Player，这是一个带动画播放的公式收集网站
+主要技术栈
+vuejs
+typesript
+three.js
+vuetify
+
+three.js在网页上呈现3d效果主要依赖 Three.js
+
                         
                     </div>
                     <div class="publish-info">
@@ -774,6 +855,34 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%87%87%E5%9D%91/">
+                        <span class="chip bg-color">采坑</span>
+                    </a>
+                    
+                    <a href="/tags/algdb/">
+                        <span class="chip bg-color">algdb</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">开发</span>
+                    </a>
+                    
+                    <a href="/tags/typescript/">
+                        <span class="chip bg-color">typescript</span>
+                    </a>
+                    
+                    <a href="/tags/webglrender/">
+                        <span class="chip bg-color">webglrender</span>
+                    </a>
+                    
+                    <a href="/tags/three-js/">
+                        <span class="chip bg-color">three.js</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-04-06T10:18:58.880Z</updated>
+  <updated>2020-04-06T10:44:00.572Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://kirahan.github.io/2020/04/06/webgl-xiang-guan-ji-zhu-ji-lu/"/>
     <id>https://kirahan.github.io/2020/04/06/webgl-xiang-guan-ji-zhu-ji-lu/</id>
     <published>2020-04-06T10:18:58.000Z</published>
-    <updated>2020-04-06T10:18:58.880Z</updated>
+    <updated>2020-04-06T10:44:00.572Z</updated>
     
     <summary type="html">
     
@@ -29,17 +29,25 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;h1 id=&quot;webgl相关技术记录总结&quot;&gt;&lt;a href=&quot;#webgl相关技术记录总结&quot; class=&quot;headerlink&quot; title=&quot;webgl相关技术记录总结&quot;&gt;&lt;/a&gt;webgl相关技术记录总结&lt;/h1&gt;&lt;p&gt;最近在开发Algdb
         
       
     
     </summary>
     
     
+    
+      <category term="采坑" scheme="https://kirahan.github.io/tags/%E9%87%87%E5%9D%91/"/>
+    
+      <category term="algdb" scheme="https://kirahan.github.io/tags/algdb/"/>
+    
+      <category term="开发" scheme="https://kirahan.github.io/tags/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="typescript" scheme="https://kirahan.github.io/tags/typescript/"/>
+    
+      <category term="webglrender" scheme="https://kirahan.github.io/tags/webglrender/"/>
+    
+      <category term="three.js" scheme="https://kirahan.github.io/tags/three-js/"/>
     
   </entry>
   
