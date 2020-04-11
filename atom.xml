@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-04-06T10:44:00.572Z</updated>
+  <updated>2020-04-11T21:23:47.265Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>这几天遇到的几个坑</title>
+    <link href="https://kirahan.github.io/2020/04/12/zhe-ji-tian-yu-dao-de-ji-ge-keng/"/>
+    <id>https://kirahan.github.io/2020/04/12/zhe-ji-tian-yu-dao-de-ji-ge-keng/</id>
+    <published>2020-04-11T21:11:04.000Z</published>
+    <updated>2020-04-11T21:23:47.265Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;这几天遇到的几个坑&quot;&gt;&lt;a href=&quot;#这几天遇到的几个坑&quot; class=&quot;headerlink&quot; title=&quot;这几天遇到的几个坑&quot;&gt;&lt;/a&gt;这几天遇到的几个坑&lt;/h1&gt;&lt;h2 id=&quot;vscode不要打开总目录&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="排坑" scheme="https://kirahan.github.io/categories/%E6%8E%92%E5%9D%91/"/>
+    
+    
+      <category term="配置" scheme="https://kirahan.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="ts支持" scheme="https://kirahan.github.io/tags/ts%E6%94%AF%E6%8C%81/"/>
+    
+      <category term="vscode" scheme="https://kirahan.github.io/tags/vscode/"/>
+    
+      <category term="坑" scheme="https://kirahan.github.io/tags/%E5%9D%91/"/>
+    
+  </entry>
   
   <entry>
     <title>webgl相关技术记录</title>

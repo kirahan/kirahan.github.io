@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>这几天遇到的几个坑</title>
+      <link href="/2020/04/12/zhe-ji-tian-yu-dao-de-ji-ge-keng/"/>
+      <url>/2020/04/12/zhe-ji-tian-yu-dao-de-ji-ge-keng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="这几天遇到的几个坑"><a href="#这几天遇到的几个坑" class="headerlink" title="这几天遇到的几个坑"></a>这几天遇到的几个坑</h1><h2 id="vscode不要打开总目录"><a href="#vscode不要打开总目录" class="headerlink" title="vscode不要打开总目录"></a>vscode不要打开总目录</h2><p><strong>经常发现vue的目录不对</strong><br>比如开发目录A中import的vue可能是项目B的<br>在js项目中不会出什么奇怪的现象，但是在ts项目中就会经常出错<br>非常容易导致名称相同的模块指向其他目录，使得定义的xxx.d.ts文件失效<br>导致无法正常代码提示</p><h2 id="nuxt配置ts支持"><a href="#nuxt配置ts支持" class="headerlink" title="nuxt配置ts支持"></a>nuxt配置ts支持</h2><ol><li>引入的是nuxt-property-decorator而不是vue-property-decorator</li><li>nuxt新增的提前获取数据，生命周期asyncData在TS的class开发模式下<br>应该放在，component<br>在全栈之颠的视频和官网都没有特别说明，一直以为是自己配置的问题<br>最后挂了vpn搜索了一下，才发现是放错位置了<br><a href="https://github.com/nuxt/nuxt.js/issues/5330" target="_blank" rel="noopener">解答1</a><br><a href="https://blog.mmyoji.com/posts/2019-10-02-nuxt-asyncdata-with-composition-api/" target="_blank" rel="noopener">解答2</a></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 排坑 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 配置 </tag>
+            
+            <tag> ts支持 </tag>
+            
+            <tag> vscode </tag>
+            
+            <tag> 坑 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>webgl相关技术记录</title>
       <link href="/2020/04/06/webgl-xiang-guan-ji-zhu-ji-lu/"/>
       <url>/2020/04/06/webgl-xiang-guan-ji-zhu-ji-lu/</url>
