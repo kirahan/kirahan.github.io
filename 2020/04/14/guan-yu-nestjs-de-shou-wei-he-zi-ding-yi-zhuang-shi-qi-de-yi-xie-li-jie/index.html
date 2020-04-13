@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="这几天遇到的几个坑, kirahan">
-    <meta name="description" content="这几天遇到的几个坑vscode不要打开总目录经常发现vue的目录不对比如开发目录A中import的vue可能是项目B的在js项目中不会出什么奇怪的现象，但是在ts项目中就会经常出错非常容易导致名称相同的模块指向其他目录，使得定义的xxx.d">
+    <meta name="keywords" content="关于nestjs的守卫和自定义装饰器的一些理解, kirahan">
+    <meta name="description" content="关于nestjs的守卫和自定义装饰器的一些理解这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目文档内容非常多，主要是多余目录结构的理解对比简单的MVC模式，nestjs种有非常多的概念如：
+
+Controller ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>这几天遇到的几个坑 | kirahan</title>
+    <title>关于nestjs的守卫和自定义装饰器的一些理解 | kirahan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">这几天遇到的几个坑</h1>
+                    <h1 class="description center-align post-title">关于nestjs的守卫和自定义装饰器的一些理解</h1>
                 </div>
             </div>
         </div>
@@ -426,20 +428,28 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                                <span class="chip bg-color">配置</span>
+                            <a href="/tags/%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">开发</span>
                             </a>
                         
-                            <a href="/tags/ts%E6%94%AF%E6%8C%81/">
-                                <span class="chip bg-color">ts支持</span>
+                            <a href="/tags/typescript/">
+                                <span class="chip bg-color">typescript</span>
                             </a>
                         
-                            <a href="/tags/vscode/">
-                                <span class="chip bg-color">vscode</span>
+                            <a href="/tags/nestjs/">
+                                <span class="chip bg-color">nestjs</span>
                             </a>
                         
-                            <a href="/tags/%E5%9D%91/">
-                                <span class="chip bg-color">坑</span>
+                            <a href="/tags/AOP/">
+                                <span class="chip bg-color">AOP</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">模块化编程</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">后端开发</span>
                             </a>
                         
                     </div>
@@ -450,8 +460,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8E%92%E5%9D%91/" class="post-category">
-                                排坑
+                            <a href="/categories/nestjs/" class="post-category">
+                                nestjs
                             </a>
                         
                     </div>
@@ -463,7 +473,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-12
+                    2020-04-14
                 </div>
                 
 
@@ -472,14 +482,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    258
+                    633
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -490,11 +500,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="这几天遇到的几个坑"><a href="#这几天遇到的几个坑" class="headerlink" title="这几天遇到的几个坑"></a>这几天遇到的几个坑</h1><h2 id="vscode不要打开总目录"><a href="#vscode不要打开总目录" class="headerlink" title="vscode不要打开总目录"></a>vscode不要打开总目录</h2><p><strong>经常发现vue的目录不对</strong><br>比如开发目录A中import的vue可能是项目B的<br>在js项目中不会出什么奇怪的现象，但是在ts项目中就会经常出错<br>非常容易导致名称相同的模块指向其他目录，使得定义的xxx.d.ts文件失效<br>导致无法正常代码提示</p>
-<h2 id="nuxt配置ts支持"><a href="#nuxt配置ts支持" class="headerlink" title="nuxt配置ts支持"></a>nuxt配置ts支持</h2><ol>
-<li>引入的是nuxt-property-decorator而不是vue-property-decorator</li>
-<li>nuxt新增的提前获取数据，生命周期asyncData在TS的class开发模式下<br>应该放在，component<br>在全栈之颠的视频和官网都没有特别说明，一直以为是自己配置的问题<br>最后挂了vpn搜索了一下，才发现是放错位置了<br><a href="https://github.com/nuxt/nuxt.js/issues/5330" target="_blank" rel="noopener">解答1</a><br><a href="https://blog.mmyoji.com/posts/2019-10-02-nuxt-asyncdata-with-composition-api/" target="_blank" rel="noopener">解答2</a></li>
+                <h1 id="关于nestjs的守卫和自定义装饰器的一些理解"><a href="#关于nestjs的守卫和自定义装饰器的一些理解" class="headerlink" title="关于nestjs的守卫和自定义装饰器的一些理解"></a>关于nestjs的守卫和自定义装饰器的一些理解</h1><h4 id="这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目"><a href="#这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目" class="headerlink" title="这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目"></a>这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目</h4><p>文档内容非常多，主要是多余目录结构的理解对比简单的MVC模式，nestjs种有非常多的概念<br>如：</p>
+<ol>
+<li>Controller 控制器</li>
+<li>provider 提供者，pr更像是一个抽象的概念，service等都可以成为provider</li>
+<li>module 模块 比较大的功能合集，可以认为一个大的功能分组就是一个module比如user，auth，commit等</li>
+<li>middleware 类似于express中的中间件，但是定义似乎更窄，很多在express中属于中间件的部分都被抽象出来了</li>
+<li>Exception filters异常过滤器，可以认为是独立的异常通知模块</li>
+<li>pipes 管道 管道也是在controller之前执行的，根据官网描述，一般用作：<strong>数据格式转换</strong> 和 <strong>验证数据是否有错</strong></li>
+<li>guards 守卫，守卫在中间件之后，管道之前执行，守卫返回true或者false，从而决定请求是否给下文执行<ul>
+<li>守卫适合用来做鉴权，比如auth或者用户角色管理</li>
+<li>主要逻辑在xxx.guards.ts中定义，通过 nest g gu xxx/xxx生成</li>
+<li>绑定守卫用useGuards() 可以绑定到一个请求，一个controller或者是全局</li>
+<li>守卫要获取上下文需要结合 Reflector </li>
+<li>通过@SetMetadata()可以给请求设置元数据，比如给submit接口绑定，只允许admin执行，就需要给submit接口设置<br>@SetMetadata(‘roles’, [‘admin’]) 或者实现自定义装饰器 @Roles(‘admin’)<br><code>export const Roles = (...roles: string[]) =&gt; SetMetadata('roles', roles);</code></li>
+</ul>
+</li>
+<li>interceptor 拦截器，拦截器和守卫类似， 用来异常处理，也适合作为日志管理</li>
+<li>自定义装饰器<blockquote>
+<p> Custom route decorators</p>
+<ul>
+<li>创建自定义装饰器非常简单 nest g decorators xxx/xxx即可 如：user.decorator.ts</li>
+</ul>
+</blockquote>
+</li>
 </ol>
+<pre><code>    import { createParamDecorator } from '@nestjs/common';
+
+    export const User = createParamDecorator((data, req) =&gt; {
+    return req.user;
+    });</code></pre><ul>
+<li>注意使用自定义装饰器在获取上下文的时候，controller和单独请求，获取方式不一样 <a href="https://docs.nestjs.com/fundamentals/execution-context" target="_blank" rel="noopener">原文</a><h4 id="单独请求"><a href="#单独请求" class="headerlink" title="单独请求"></a>单独请求</h4><code>const roles = this.reflector.get&lt;string[]&gt;('roles', context.getHandler());</code><h4 id="作用于controller"><a href="#作用于controller" class="headerlink" title="作用于controller"></a>作用于controller</h4><code>const roles = this.reflector.get&lt;string[]&gt;('roles', context.getClass());</code><h4 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h4><pre><code>const roles = this.reflector.getAllAndOverride&lt;string[]&gt;('roles', [
+context.getHandler(),
+context.getClass(),
+]);</code></pre><h4 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h4><pre><code>const roles = this.reflector.getAllAndMerge&lt;string[]&gt;('roles', [
+context.getHandler(),
+context.getClass(),
+]);</code></pre></li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -538,7 +581,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kirahan.github.io/2020/04/12/zhe-ji-tian-yu-dao-de-ji-ge-keng/">https://kirahan.github.io/2020/04/12/zhe-ji-tian-yu-dao-de-ji-ge-keng/</a>
+                    <a href="https://kirahan.github.io/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/">https://kirahan.github.io/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,20 +619,28 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                                    <span class="chip bg-color">配置</span>
+                                <a href="/tags/%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">开发</span>
                                 </a>
                             
-                                <a href="/tags/ts%E6%94%AF%E6%8C%81/">
-                                    <span class="chip bg-color">ts支持</span>
+                                <a href="/tags/typescript/">
+                                    <span class="chip bg-color">typescript</span>
                                 </a>
                             
-                                <a href="/tags/vscode/">
-                                    <span class="chip bg-color">vscode</span>
+                                <a href="/tags/nestjs/">
+                                    <span class="chip bg-color">nestjs</span>
                                 </a>
                             
-                                <a href="/tags/%E5%9D%91/">
-                                    <span class="chip bg-color">坑</span>
+                                <a href="/tags/AOP/">
+                                    <span class="chip bg-color">AOP</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">模块化编程</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">后端开发</span>
                                 </a>
                             
                         </div>
@@ -760,7 +811,7 @@
         repo: 'gitalkcomment',
         owner: 'kirahan',
         admin: "kirahan",
-        id: '2020-04-12T05-11-04',
+        id: '2020-04-14T03-24-07',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -781,9 +832,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/">
                     <div class="card-image">
@@ -803,9 +855,9 @@ Controller
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -818,6 +870,7 @@ Controller
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -856,37 +909,33 @@ Controller
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/06/webgl-xiang-guan-ji-zhu-ji-lu/">
+                <a href="/2020/04/12/zhe-ji-tian-yu-dao-de-ji-ge-keng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="webgl相关技术记录">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="这几天遇到的几个坑">
                         
-                        <span class="card-title">webgl相关技术记录</span>
+                        <span class="card-title">这几天遇到的几个坑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            webgl相关技术记录总结最近在开发Algdb Player，这是一个带动画播放的公式收集网站
-主要技术栈
-vuejs
-typesript
-three.js
-vuetify
-
-three.js在网页上呈现3d效果主要依赖 Three.js
-
+                            这几天遇到的几个坑vscode不要打开总目录经常发现vue的目录不对比如开发目录A中import的vue可能是项目B的在js项目中不会出什么奇怪的现象，但是在ts项目中就会经常出错非常容易导致名称相同的模块指向其他目录，使得定义的xxx.d
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Han Zhao
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8E%92%E5%9D%91/" class="post-category">
+                                    排坑
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -894,28 +943,20 @@ three.js在网页上呈现3d效果主要依赖 Three.js
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%87%87%E5%9D%91/">
-                        <span class="chip bg-color">采坑</span>
+                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">配置</span>
                     </a>
                     
-                    <a href="/tags/algdb/">
-                        <span class="chip bg-color">algdb</span>
+                    <a href="/tags/ts%E6%94%AF%E6%8C%81/">
+                        <span class="chip bg-color">ts支持</span>
                     </a>
                     
-                    <a href="/tags/%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">开发</span>
+                    <a href="/tags/vscode/">
+                        <span class="chip bg-color">vscode</span>
                     </a>
                     
-                    <a href="/tags/typescript/">
-                        <span class="chip bg-color">typescript</span>
-                    </a>
-                    
-                    <a href="/tags/webglrender/">
-                        <span class="chip bg-color">webglrender</span>
-                    </a>
-                    
-                    <a href="/tags/three-js/">
-                        <span class="chip bg-color">three.js</span>
+                    <a href="/tags/%E5%9D%91/">
+                        <span class="chip bg-color">坑</span>
                     </a>
                     
                 </div>

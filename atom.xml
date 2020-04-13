@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-04-11T21:23:47.265Z</updated>
+  <updated>2020-04-13T19:54:46.275Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于nestjs的守卫和自定义装饰器的一些理解</title>
+    <link href="https://kirahan.github.io/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/"/>
+    <id>https://kirahan.github.io/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/</id>
+    <published>2020-04-13T19:24:07.000Z</published>
+    <updated>2020-04-13T19:54:46.275Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;关于nestjs的守卫和自定义装饰器的一些理解&quot;&gt;&lt;a href=&quot;#关于nestjs的守卫和自定义装饰器的一些理解&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="nestjs" scheme="https://kirahan.github.io/categories/nestjs/"/>
+    
+    
+      <category term="开发" scheme="https://kirahan.github.io/tags/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="typescript" scheme="https://kirahan.github.io/tags/typescript/"/>
+    
+      <category term="nestjs" scheme="https://kirahan.github.io/tags/nestjs/"/>
+    
+      <category term="AOP" scheme="https://kirahan.github.io/tags/AOP/"/>
+    
+      <category term="模块化编程" scheme="https://kirahan.github.io/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="后端开发" scheme="https://kirahan.github.io/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>这几天遇到的几个坑</title>
