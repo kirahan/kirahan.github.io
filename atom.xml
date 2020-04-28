@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kirahan.github.io/"/>
-  <updated>2020-04-13T19:54:46.275Z</updated>
+  <updated>2020-04-28T00:13:44.474Z</updated>
   <id>https://kirahan.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启</title>
+    <link href="https://kirahan.github.io/2020/04/28/ji-yu-obsv25-de-xin-te-xing-zuo-liao-shi-li-obs-zai-ru-webgl-pa-keng-obs-diao-shi-mo-shi-kai-qi/"/>
+    <id>https://kirahan.github.io/2020/04/28/ji-yu-obsv25-de-xin-te-xing-zuo-liao-shi-li-obs-zai-ru-webgl-pa-keng-obs-diao-shi-mo-shi-kai-qi/</id>
+    <published>2020-04-27T23:40:08.000Z</published>
+    <updated>2020-04-28T00:13:44.474Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启&quot;&gt;&lt;a href=&quot;#基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="obs" scheme="https://kirahan.github.io/categories/obs/"/>
+    
+    
+      <category term="采坑" scheme="https://kirahan.github.io/tags/%E9%87%87%E5%9D%91/"/>
+    
+      <category term="魔方" scheme="https://kirahan.github.io/tags/%E9%AD%94%E6%96%B9/"/>
+    
+      <category term="开发" scheme="https://kirahan.github.io/tags/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="直播插件" scheme="https://kirahan.github.io/tags/%E7%9B%B4%E6%92%AD%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="obs browser" scheme="https://kirahan.github.io/tags/obs-browser/"/>
+    
+      <category term="obs" scheme="https://kirahan.github.io/tags/obs/"/>
+    
+  </entry>
   
   <entry>
     <title>关于nestjs的守卫和自定义装饰器的一些理解</title>

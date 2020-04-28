@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启</title>
+      <link href="/2020/04/28/ji-yu-obsv25-de-xin-te-xing-zuo-liao-shi-li-obs-zai-ru-webgl-pa-keng-obs-diao-shi-mo-shi-kai-qi/"/>
+      <url>/2020/04/28/ji-yu-obsv25-de-xin-te-xing-zuo-liao-shi-li-obs-zai-ru-webgl-pa-keng-obs-diao-shi-mo-shi-kai-qi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启"><a href="#基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启" class="headerlink" title="基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启"></a>基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启</h1><h2 id="OBS-V25-有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下"><a href="#OBS-V25-有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下" class="headerlink" title="OBS V25 有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下"></a><a href="https://github.com/obsproject/obs-studio/releases" target="_blank" rel="noopener">OBS V25</a> 有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下</h2><blockquote><p>25.0 New Features <a href="https://obsproject.com/tools/browser-drag-and-drop" target="_blank" rel="noopener">官方演示</a><br>Added the ability to drag and drop URLs to create browser sources (after displaying a confirmation prompt to ensure it was by intention) [WizardCM]</p></blockquote><p>简单说的话就是可以通过从浏览器拖动a标签的方式来快捷添加obs browser源，甚至可以直接把初始化配置参数写进a标签的href中<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200428074823.png" alt=""></p><h2 id="支持参数"><a href="#支持参数" class="headerlink" title="支持参数"></a>支持参数</h2><p>layer-name：sence名字<br>layer-width: 宽度<br>layer-height：高度</p><h2 id="但是导入过程中遇到2个坑"><a href="#但是导入过程中遇到2个坑" class="headerlink" title="但是导入过程中遇到2个坑"></a>但是导入过程中遇到2个坑</h2><ol><li>坑 obs的browser plugin默认不支持webgl<br>解决方式： 给obs快捷方式中增加字段 <code>--enable-gpu</code>即可</li></ol><ol start="2"><li>坑 obs的browser plugin不知道怎么打开Devtools，导致无法调试无法纠错，也导致问题1 很难发现原因<br>解决方式： obs采用远程端口调试，所以开通一个端口用来监听，不在设置中间，也是要在快捷方式中增加字段 <code>--remote-debugging-port=8080</code><br><img src="http://imagebed.solarsunrise.cn/blog/img/20200428081029.png" alt=""></li></ol><h2 id="综上-完整指令如下："><a href="#综上-完整指令如下：" class="headerlink" title="综上 完整指令如下："></a>综上 完整指令如下：</h2><p><code>"yourobspath\obs64.exe" --remote-debugging-port=8080  --enable-gpu</code></p><h2 id="爬坑过程中发现发现一些好用的东西"><a href="#爬坑过程中发现发现一些好用的东西" class="headerlink" title="爬坑过程中发现发现一些好用的东西"></a>爬坑过程中发现发现一些好用的东西</h2><ul><li><p>obs现在有一个自定义dock功能，也就是说可以很方便的把开发者自己写的web端工具直接内嵌到obs控制面板中，比如弹幕助手、点歌台、抽奖，后面开发会非常方便<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200428080205.png" alt=""></p></li><li><p>obs的browser内部有监听事件和一些控制obs的方法，结合事件监听，可以做到根据场景自动变化UI，用来做基于OBS的自动化直播方案也很容易进行了 <a href="https://github.com/obsproject/obs-browser" target="_blank" rel="noopener">具体文档</a>  </p><pre><code>obsSceneChangedobsSourceVisibleChangedobsSourceActiveChangedobsStreamingStartingobsStreamingStartedobsStreamingStoppingobsStreamingStoppedobsRecordingStartingobsRecordingStartedobsRecordingPausedobsRecordingUnpausedobsRecordingStoppingobsRecordingStoppedobsReplaybufferStartingobsReplaybufferStartedobsReplaybufferStoppingobsReplaybufferStopped</code></pre></li><li><p>obs 有了多场景预览，功能跟导播台的画面切换面板几乎一致了，可以基于此利用一块外接的触控屏幕实现性价比极高的切换台<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200428080822.png" alt=""></p></li></ul><h2 id="一键载入OBS效果"><a href="#一键载入OBS效果" class="headerlink" title="一键载入OBS效果"></a>一键载入OBS效果</h2><p><img src="http://imagebed.solarsunrise.cn/blog/img/20200428081335.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> obs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 采坑 </tag>
+            
+            <tag> 魔方 </tag>
+            
+            <tag> 开发 </tag>
+            
+            <tag> 直播插件 </tag>
+            
+            <tag> obs browser </tag>
+            
+            <tag> obs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于nestjs的守卫和自定义装饰器的一些理解</title>
       <link href="/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/"/>
       <url>/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/</url>

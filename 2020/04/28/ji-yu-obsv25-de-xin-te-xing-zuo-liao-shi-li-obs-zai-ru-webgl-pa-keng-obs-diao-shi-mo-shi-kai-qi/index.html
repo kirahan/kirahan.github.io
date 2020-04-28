@@ -4,10 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于nestjs的守卫和自定义装饰器的一些理解, kirahan">
-    <meta name="description" content="关于nestjs的守卫和自定义装饰器的一些理解这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目文档内容非常多，主要是多余目录结构的理解对比简单的MVC模式，nestjs种有非常多的概念如：
-
-Controller ">
+    <meta name="keywords" content="基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启, kirahan">
+    <meta name="description" content="基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启OBS V25 有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下
+25.0 New Features 官方演示Added the ability ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@ Controller ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>关于nestjs的守卫和自定义装饰器的一些理解 | kirahan</title>
+    <title>基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启 | kirahan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +305,12 @@ Controller ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于nestjs的守卫和自定义装饰器的一些理解</h1>
+                    <h1 class="description center-align post-title">基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启</h1>
                 </div>
             </div>
         </div>
@@ -428,28 +427,28 @@ Controller ">
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/%E9%87%87%E5%9D%91/">
+                                <span class="chip bg-color">采坑</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%AD%94%E6%96%B9/">
+                                <span class="chip bg-color">魔方</span>
+                            </a>
+                        
                             <a href="/tags/%E5%BC%80%E5%8F%91/">
                                 <span class="chip bg-color">开发</span>
                             </a>
                         
-                            <a href="/tags/typescript/">
-                                <span class="chip bg-color">typescript</span>
+                            <a href="/tags/%E7%9B%B4%E6%92%AD%E6%8F%92%E4%BB%B6/">
+                                <span class="chip bg-color">直播插件</span>
                             </a>
                         
-                            <a href="/tags/nestjs/">
-                                <span class="chip bg-color">nestjs</span>
+                            <a href="/tags/obs-browser/">
+                                <span class="chip bg-color">obs browser</span>
                             </a>
                         
-                            <a href="/tags/AOP/">
-                                <span class="chip bg-color">AOP</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
-                                <span class="chip bg-color">模块化编程</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">
-                                <span class="chip bg-color">后端开发</span>
+                            <a href="/tags/obs/">
+                                <span class="chip bg-color">obs</span>
                             </a>
                         
                     </div>
@@ -460,8 +459,8 @@ Controller ">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/nestjs/" class="post-category">
-                                nestjs
+                            <a href="/categories/obs/" class="post-category">
+                                obs
                             </a>
                         
                     </div>
@@ -473,7 +472,7 @@ Controller ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-14
+                    2020-04-28
                 </div>
                 
 
@@ -482,7 +481,7 @@ Controller ">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    633
+                    559
                 </div>
                 
 
@@ -500,44 +499,43 @@ Controller ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="关于nestjs的守卫和自定义装饰器的一些理解"><a href="#关于nestjs的守卫和自定义装饰器的一些理解" class="headerlink" title="关于nestjs的守卫和自定义装饰器的一些理解"></a>关于nestjs的守卫和自定义装饰器的一些理解</h1><h4 id="这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目"><a href="#这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目" class="headerlink" title="这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目"></a>这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目</h4><p>文档内容非常多，主要是多余目录结构的理解对比简单的MVC模式，nestjs种有非常多的概念<br>如：</p>
-<ol>
-<li>Controller 控制器</li>
-<li>provider 提供者，pr更像是一个抽象的概念，service等都可以成为provider</li>
-<li>module 模块 比较大的功能合集，可以认为一个大的功能分组就是一个module比如user，auth，commit等</li>
-<li>middleware 类似于express中的中间件，但是定义似乎更窄，很多在express中属于中间件的部分都被抽象出来了</li>
-<li>Exception filters异常过滤器，可以认为是独立的异常通知模块</li>
-<li>pipes 管道 管道也是在controller之前执行的，根据官网描述，一般用作：<strong>数据格式转换</strong> 和 <strong>验证数据是否有错</strong></li>
-<li>guards 守卫，守卫在中间件之后，管道之前执行，守卫返回true或者false，从而决定请求是否给下文执行<ul>
-<li>守卫适合用来做鉴权，比如auth或者用户角色管理</li>
-<li>主要逻辑在xxx.guards.ts中定义，通过 nest g gu xxx/xxx生成</li>
-<li>绑定守卫用useGuards() 可以绑定到一个请求，一个controller或者是全局</li>
-<li>守卫要获取上下文需要结合 Reflector </li>
-<li>通过@SetMetadata()可以给请求设置元数据，比如给submit接口绑定，只允许admin执行，就需要给submit接口设置<br>@SetMetadata(‘roles’, [‘admin’]) 或者实现自定义装饰器 @Roles(‘admin’)<br><code>export const Roles = (...roles: string[]) =&gt; SetMetadata('roles', roles);</code></li>
-</ul>
-</li>
-<li>interceptor 拦截器，拦截器和守卫类似， 用来异常处理，也适合作为日志管理</li>
-<li>自定义装饰器<blockquote>
-<p> Custom route decorators</p>
-<ul>
-<li>创建自定义装饰器非常简单 nest g decorators xxx/xxx即可 如：user.decorator.ts</li>
-</ul>
+                <h1 id="基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启"><a href="#基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启" class="headerlink" title="基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启"></a>基于obsV25的新特性做了实例，obs载入webgl爬坑、obs调试模式开启</h1><h2 id="OBS-V25-有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下"><a href="#OBS-V25-有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下" class="headerlink" title="OBS V25 有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下"></a><a href="https://github.com/obsproject/obs-studio/releases" target="_blank" rel="noopener">OBS V25</a> 有个新增特很香，所以花了点时间研究，中间遇到两个坑，所以记录一下</h2><blockquote>
+<p>25.0 New Features <a href="https://obsproject.com/tools/browser-drag-and-drop" target="_blank" rel="noopener">官方演示</a><br>Added the ability to drag and drop URLs to create browser sources (after displaying a confirmation prompt to ensure it was by intention) [WizardCM]</p>
 </blockquote>
-</li>
+<p>简单说的话就是可以通过从浏览器拖动a标签的方式来快捷添加obs browser源，甚至可以直接把初始化配置参数写进a标签的href中<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200428074823.png" alt=""></p>
+<h2 id="支持参数"><a href="#支持参数" class="headerlink" title="支持参数"></a>支持参数</h2><p>layer-name：sence名字<br>layer-width: 宽度<br>layer-height：高度</p>
+<h2 id="但是导入过程中遇到2个坑"><a href="#但是导入过程中遇到2个坑" class="headerlink" title="但是导入过程中遇到2个坑"></a>但是导入过程中遇到2个坑</h2><ol>
+<li>坑 obs的browser plugin默认不支持webgl<br>解决方式： 给obs快捷方式中增加字段 <code>--enable-gpu</code>即可</li>
 </ol>
-<pre><code>    import { createParamDecorator } from '@nestjs/common';
-
-    export const User = createParamDecorator((data, req) =&gt; {
-    return req.user;
-    });</code></pre><ul>
-<li>注意使用自定义装饰器在获取上下文的时候，controller和单独请求，获取方式不一样 <a href="https://docs.nestjs.com/fundamentals/execution-context" target="_blank" rel="noopener">原文</a><h4 id="单独请求"><a href="#单独请求" class="headerlink" title="单独请求"></a>单独请求</h4><code>const roles = this.reflector.get&lt;string[]&gt;('roles', context.getHandler());</code><h4 id="作用于controller"><a href="#作用于controller" class="headerlink" title="作用于controller"></a>作用于controller</h4><code>const roles = this.reflector.get&lt;string[]&gt;('roles', context.getClass());</code><h4 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h4><pre><code>const roles = this.reflector.getAllAndOverride&lt;string[]&gt;('roles', [
-context.getHandler(),
-context.getClass(),
-]);</code></pre><h4 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h4><pre><code>const roles = this.reflector.getAllAndMerge&lt;string[]&gt;('roles', [
-context.getHandler(),
-context.getClass(),
-]);</code></pre></li>
+<ol start="2">
+<li>坑 obs的browser plugin不知道怎么打开Devtools，导致无法调试无法纠错，也导致问题1 很难发现原因<br>解决方式： obs采用远程端口调试，所以开通一个端口用来监听，不在设置中间，也是要在快捷方式中增加字段 <code>--remote-debugging-port=8080</code><br><img src="http://imagebed.solarsunrise.cn/blog/img/20200428081029.png" alt=""></li>
+</ol>
+<h2 id="综上-完整指令如下："><a href="#综上-完整指令如下：" class="headerlink" title="综上 完整指令如下："></a>综上 完整指令如下：</h2><p><code>"yourobspath\obs64.exe" --remote-debugging-port=8080  --enable-gpu</code></p>
+<h2 id="爬坑过程中发现发现一些好用的东西"><a href="#爬坑过程中发现发现一些好用的东西" class="headerlink" title="爬坑过程中发现发现一些好用的东西"></a>爬坑过程中发现发现一些好用的东西</h2><ul>
+<li><p>obs现在有一个自定义dock功能，也就是说可以很方便的把开发者自己写的web端工具直接内嵌到obs控制面板中，比如弹幕助手、点歌台、抽奖，后面开发会非常方便<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200428080205.png" alt=""></p>
+</li>
+<li><p>obs的browser内部有监听事件和一些控制obs的方法，结合事件监听，可以做到根据场景自动变化UI，用来做基于OBS的自动化直播方案也很容易进行了 <a href="https://github.com/obsproject/obs-browser" target="_blank" rel="noopener">具体文档</a>  </p>
+<pre><code>obsSceneChanged
+obsSourceVisibleChanged
+obsSourceActiveChanged
+obsStreamingStarting
+obsStreamingStarted
+obsStreamingStopping
+obsStreamingStopped
+obsRecordingStarting
+obsRecordingStarted
+obsRecordingPaused
+obsRecordingUnpaused
+obsRecordingStopping
+obsRecordingStopped
+obsReplaybufferStarting
+obsReplaybufferStarted
+obsReplaybufferStopping
+obsReplaybufferStopped</code></pre></li>
+<li><p>obs 有了多场景预览，功能跟导播台的画面切换面板几乎一致了，可以基于此利用一块外接的触控屏幕实现性价比极高的切换台<br><img src="http://imagebed.solarsunrise.cn/blog/img/20200428080822.png" alt=""></p>
+</li>
 </ul>
+<h2 id="一键载入OBS效果"><a href="#一键载入OBS效果" class="headerlink" title="一键载入OBS效果"></a>一键载入OBS效果</h2><p><img src="http://imagebed.solarsunrise.cn/blog/img/20200428081335.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -581,7 +579,7 @@ context.getClass(),
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kirahan.github.io/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/">https://kirahan.github.io/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/</a>
+                    <a href="https://kirahan.github.io/2020/04/28/ji-yu-obsv25-de-xin-te-xing-zuo-liao-shi-li-obs-zai-ru-webgl-pa-keng-obs-diao-shi-mo-shi-kai-qi/">https://kirahan.github.io/2020/04/28/ji-yu-obsv25-de-xin-te-xing-zuo-liao-shi-li-obs-zai-ru-webgl-pa-keng-obs-diao-shi-mo-shi-kai-qi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -619,28 +617,28 @@ context.getClass(),
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/%E9%87%87%E5%9D%91/">
+                                    <span class="chip bg-color">采坑</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%AD%94%E6%96%B9/">
+                                    <span class="chip bg-color">魔方</span>
+                                </a>
+                            
                                 <a href="/tags/%E5%BC%80%E5%8F%91/">
                                     <span class="chip bg-color">开发</span>
                                 </a>
                             
-                                <a href="/tags/typescript/">
-                                    <span class="chip bg-color">typescript</span>
+                                <a href="/tags/%E7%9B%B4%E6%92%AD%E6%8F%92%E4%BB%B6/">
+                                    <span class="chip bg-color">直播插件</span>
                                 </a>
                             
-                                <a href="/tags/nestjs/">
-                                    <span class="chip bg-color">nestjs</span>
+                                <a href="/tags/obs-browser/">
+                                    <span class="chip bg-color">obs browser</span>
                                 </a>
                             
-                                <a href="/tags/AOP/">
-                                    <span class="chip bg-color">AOP</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
-                                    <span class="chip bg-color">模块化编程</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">
-                                    <span class="chip bg-color">后端开发</span>
+                                <a href="/tags/obs/">
+                                    <span class="chip bg-color">obs</span>
                                 </a>
                             
                         </div>
@@ -811,7 +809,7 @@ context.getClass(),
         repo: 'gitalkcomment',
         owner: 'kirahan',
         admin: "kirahan",
-        id: '2020-04-14T03-24-07',
+        id: '2020-04-28T07-40-08',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -832,9 +830,10 @@ context.getClass(),
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/04/28/ji-yu-obsv25-de-xin-te-xing-zuo-liao-shi-li-obs-zai-ru-webgl-pa-keng-obs-diao-shi-mo-shi-kai-qi/">
                     <div class="card-image">
@@ -853,9 +852,9 @@ context.getClass(),
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -868,6 +867,7 @@ context.getClass(),
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -906,31 +906,33 @@ context.getClass(),
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/12/zhe-ji-tian-yu-dao-de-ji-ge-keng/">
+                <a href="/2020/04/14/guan-yu-nestjs-de-shou-wei-he-zi-ding-yi-zhuang-shi-qi-de-yi-xie-li-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="这几天遇到的几个坑">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="关于nestjs的守卫和自定义装饰器的一些理解">
                         
-                        <span class="card-title">这几天遇到的几个坑</span>
+                        <span class="card-title">关于nestjs的守卫和自定义装饰器的一些理解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这几天遇到的几个坑vscode不要打开总目录经常发现vue的目录不对比如开发目录A中import的vue可能是项目B的在js项目中不会出什么奇怪的现象，但是在ts项目中就会经常出错非常容易导致名称相同的模块指向其他目录，使得定义的xxx.d
+                            关于nestjs的守卫和自定义装饰器的一些理解这几天一直在阅读nestjs的文档，感觉这个框架很强大，适合做一些大型项目文档内容非常多，主要是多余目录结构的理解对比简单的MVC模式，nestjs种有非常多的概念如：
+
+Controller 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8E%92%E5%9D%91/" class="post-category">
-                                    排坑
+                            <a href="/categories/nestjs/" class="post-category">
+                                    nestjs
                                 </a>
                             
                             
@@ -940,20 +942,28 @@ context.getClass(),
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">配置</span>
+                    <a href="/tags/%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">开发</span>
                     </a>
                     
-                    <a href="/tags/ts%E6%94%AF%E6%8C%81/">
-                        <span class="chip bg-color">ts支持</span>
+                    <a href="/tags/typescript/">
+                        <span class="chip bg-color">typescript</span>
                     </a>
                     
-                    <a href="/tags/vscode/">
-                        <span class="chip bg-color">vscode</span>
+                    <a href="/tags/nestjs/">
+                        <span class="chip bg-color">nestjs</span>
                     </a>
                     
-                    <a href="/tags/%E5%9D%91/">
-                        <span class="chip bg-color">坑</span>
+                    <a href="/tags/AOP/">
+                        <span class="chip bg-color">AOP</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">模块化编程</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">后端开发</span>
                     </a>
                     
                 </div>
